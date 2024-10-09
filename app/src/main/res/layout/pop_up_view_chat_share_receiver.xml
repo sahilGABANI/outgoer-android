@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/_30sdp">
+
+        <LinearLayout
+            android:id="@+id/deleteLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:background="@drawable/new_login_edittext_background"
+            android:backgroundTint="@color/white"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/delete"
+                android:textColor="@color/red"
+                android:textSize="@dimen/_15ssp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_delete_sponty"
+                app:tint="@color/red" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/secondLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/deleteLinearLayout"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivUserProfileImage"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_22sdp"
+                    android:layout_gravity="bottom"
+                    android:visibility="visible"
+                    app:riv_oval="true"
+                    tools:src="@drawable/ic_chat_user_placeholder" />
+
+                <FrameLayout
+                    android:id="@+id/videoThumbFrameLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    app:layout_constraintStart_toEndOf="@id/ivUserProfileImage"
+                    app:layout_constraintTop_toBottomOf="@id/receiverNameAppCompat"
+                    tools:ignore="MissingConstraints">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/ivMediaView"
+                        android:layout_width="@dimen/_110sdp"
+                        android:layout_height="@dimen/_170sdp"
+                        android:layout_margin="@dimen/_2sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:scaleType="centerCrop"
+                        app:riv_corner_radius="@dimen/_4sdp"
+                        tools:src="@drawable/ic_place_holder_post" />
+
+                    <LinearLayout
+                        android:id="@+id/postTypeLinearLayout"
+                        android:layout_width="@dimen/_106sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_4sdp"
+                        android:layout_marginVertical="@dimen/_2sdp"
+                        android:background="@drawable/bg_grey_top_border"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_4sdp">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/ivUserProfile"
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ring_gredient_color"
+                            android:padding="@dimen/_1sdp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_chat_user_placeholder"
+                            app:riv_border_width="@dimen/zero_dp"
+                            app:riv_corner_radius="@dimen/_26sdp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:layout_toEndOf="@+id/profileFrameLayout"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/llUsernameWithLocation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvUsername"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/inter_semi_bold"
+                                    android:maxLength="15"
+                                    android:maxLines="1"
+                                    android:textColor="@color/md_white"
+                                    android:textSize="@dimen/_8ssp"
+                                    android:textStyle="bold"
+                                    tools:text="Username" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivVerified"
+                                    android:layout_width="@dimen/_10sdp"
+                                    android:layout_height="@dimen/_10sdp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="@dimen/_3sdp"
+                                    android:layout_marginTop="@dimen/half_dp"
+                                    android:src="@drawable/ic_user_verificatied_badge"
+                                    android:visibility="gone" />
+
+
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvLocation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/half_dp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textColor="@color/white_50_opacity"
+                                android:textSize="@dimen/_6ssp"
+                                tools:text="United States of America" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/reelTypeAppCompatImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|bottom"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:src="@drawable/ic_reels_icon_saved" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/timeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/white_50_opacity"
+                android:textSize="@dimen/_9ssp"
+                tools:text="1:00 PM" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/thirdLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/secondLayout"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/new_login_edittext_background"
+            android:backgroundTint="#26FFFFFF"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:paddingVertical="@dimen/_5sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/likeAppCompatImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_thumbs_up" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/loveAppCompatImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:src="@drawable/ic_like_heart" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/laughingAppCompatImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_laughing" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/expressionAppCompatImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:src="@drawable/ic_shock_emoji" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/sadAppCompatImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_sad_emoji" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/prayAppCompatImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/ic_hive_five" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/locationLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_5sdp"
+        android:paddingVertical="@dimen/_4sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/locationAppCompatImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_post_location"
+            android:layout_centerVertical="true"
+            android:tint="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/locationAppCompatTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:fontFamily="@font/inter_medium"
+            android:layout_toEndOf="@+id/locationAppCompatImageView"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            tools:text="Friday 10:30 PM - 03:30 AM " />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/locationAddressAppCompatTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:maxLines="2"
+            android:fontFamily="@font/inter_regular"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/locationAppCompatImageView"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            tools:text="Friday 10:30 PM - 03:30 AM " />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/grey_action"
+        android:layout_marginVertical="@dimen/_8sdp"
+        app:layout_constraintTop_toBottomOf="@+id/locationLinearLayout"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.newvenuedetail.VenueReviewActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_new_back_arrow_icon" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/venueNameAppCompatTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/inter_semi_bold"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"
+            android:text="@string/label_review" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+        android:id="@+id/venueRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_below="@id/rlHeader"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/_5ssp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:numStars="5"
+        android:progressDrawable="@drawable/venue_review_ratingbar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/venueRatingBar"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/inter_semi_bold"
+        android:text="@string/label_review"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp" />
+
+    <FrameLayout
+        android:id="@+id/reviewFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvReview">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:background="@color/colorFullTransparent"
+            android:backgroundTint="@color/grey_dark"
+            app:counterEnabled="true"
+            app:counterMaxLength="100"
+            app:counterTextColor="@color/grey_light"
+            app:hintEnabled="false">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/reviewTextAppCompatEditText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_90sdp"
+                android:background="@drawable/create_poll_edittext_background"
+                android:fontFamily="@font/inter_regular"
+                android:gravity="top|start"
+                android:hint="@string/hint_add_review"
+                android:inputType="textCapSentences"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey_light"
+                android:textSize="@dimen/_10ssp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/photoPickerAppCompatImageView"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:padding="@dimen/_4sdp"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="@dimen/_22sdp"
+            android:layout_marginBottom="@dimen/_22sdp"
+            android:src="@drawable/ic_attach" />
+
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/photosRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_below="@+id/reviewFrameLayout"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <FrameLayout
+        android:id="@+id/continueFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_16sdp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/continueMaterialButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:backgroundTint="@color/purple"
+            android:fontFamily="@font/inter_semi_bold"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/label_publish"
+            android:textAllCaps="false"
+            android:textColor="@color/md_white"
+            android:textSize="@dimen/_12ssp"
+            app:cornerRadius="@dimen/_6sdp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+</RelativeLayout>

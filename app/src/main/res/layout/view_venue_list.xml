@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/_5sdp">
+
+    <LinearLayout
+        android:id="@+id/cardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/new_login_edittext_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/placeVenueFrameLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivPlaceImage"
+                    android:layout_width="@dimen/_52sdp"
+                    android:layout_height="@dimen/_52sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:background="@drawable/ring_gredient_color"
+                    android:padding="@dimen/_1sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_place_holder_post"
+                    app:riv_border_width="@dimen/zero_dp"
+                    app:riv_corner_radius="@dimen/_26sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/liveAppCompatTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:background="@drawable/ring_gredient_color"
+                    android:fontFamily="@font/inter_semi_bold"
+                    android:paddingHorizontal="@dimen/_6sdp"
+                    android:paddingVertical="@dimen/_2sdp"
+                    android:text="@string/live"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8ssp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/favoriteLinearLayout"
+                android:layout_toEndOf="@id/placeVenueFrameLayout"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPlaceName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:fontFamily="@font/inter_semi_bold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    tools:text="Title" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPlaceRatingCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_regular"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10ssp"
+                        tools:text="4.0" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_14sdp"
+                        android:layout_height="@dimen/_14sdp"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:src="@drawable/ic_venue_review_ratingbar_star_filled" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_3sdp"
+                        android:layout_height="@dimen/_3sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_favourite_venue_dote" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/distanceAppCompatTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_regular"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10ssp"
+                        tools:text="19 km" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/favoriteLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/favoriteAppCompatImageView"
+                    android:layout_width="@dimen/_26sdp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:src="@drawable/ic_venue_review_ratingbar_star_empty" />
+
+                <FrameLayout
+                    android:id="@+id/joinFrameLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/infoLinearLayout"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginHorizontal="@dimen/_16sdp">
+
+                    <LinearLayout
+                        android:id="@+id/checkJoinMaterialButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/firstRoundedImageView"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:background="@drawable/grey_semi_transparent"
+                            android:src="@drawable/ic_add"
+                            app:riv_corner_radius="@dimen/_16sdp" />
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/secondRoundedImageView"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_marginStart="-12dp"
+                            android:background="@drawable/grey_semi_transparent"
+                            android:src="@drawable/ic_add"
+                            app:riv_corner_radius="@dimen/_16sdp" />
+
+                        <!--                        <com.makeramen.roundedimageview.RoundedImageView-->
+                        <!--                            android:id="@+id/thirdRoundedImageView"-->
+                        <!--                            android:layout_width="@dimen/_24sdp"-->
+                        <!--                            android:layout_height="@dimen/_24sdp"-->
+                        <!--                            android:layout_marginStart="-12dp"-->
+                        <!--                            android:background="@drawable/grey_semi_transparent"-->
+                        <!--                            android:src="@drawable/ic_add"-->
+                        <!--                            app:riv_corner_radius="@dimen/_16sdp" />-->
+
+                        <FrameLayout
+                            android:id="@+id/moreFrameLayout"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_marginStart="-12dp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/maxRoundedImageView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/grey_semi_transparent"
+                                android:fontFamily="@font/inter_regular"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:textColor="@color/md_white"
+                                android:textSize="@dimen/_10sdp" />
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/view_new_favourite_venue_user_profile" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

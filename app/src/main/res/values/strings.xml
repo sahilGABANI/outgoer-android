@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name">Outgoer</string>
+
+    <string name="facebook_app_id">1323503751476839</string>
+    <string name="facebook_client_token">7ab3d70595ac7c1e89552705f36da013</string>
+    <string name="fb_login_protocol_scheme">fb1323503751476839</string>
+    <string name="agora_app_id" translatable="false">417161094c454e85bb655a5b2e7f474c</string>
+    <string name="google_map_api_key">AIzaSyAaZC5gor_kIBK6h9H1jisiOTYZ2SrsGp8</string>
+
+    <string name="label_next">Next</string>
+
+    <string name="label_see_all">See All</string>
+    <string name="label_send">Send</string>
+    <string name="label_search">Search</string>
+    <string name="label_search_">Search...</string>
+    <string name="label_email">Email</string>
+    <string name="label_name">Name</string>
+    <string name="label_log_in">Log In</string>
+    <string name="label_sign_up">Sign up</string>
+    <string name="label_my_profile">My Profile</string>
+    <string name="label_new_post">New Post</string>
+    <string name="label_gallery">Gallery</string>
+    <string name="label_tag_people">Tag People</string>
+    <string name="label_tag_venue">Tag Venue</string>
+    <string name="label_tag_friend">Tag Friend</string>
+    <string name="label_add_location">Add Location</string>
+    <string name="label_add_venue">Add venue</string>
+    <string name="label_edit_profile">Edit Profile</string>
+    <string name="label_home">Home</string>
+    <string name="label_about">About</string>
+    <string name="label_write_caption">Write a caption…</string>
+    <string name="label_followers">Followers</string>
+    <string name="label_following">Following</string>
+    <string name="label_mutual">Mutual</string>
+    <string name="label_map">Map</string>
+    <string name="label_logout">Logout</string>
+    <string name="label_message">Message</string>
+    <string name="label_online">Online</string>
+    <string name="label_reels">Reels</string>
+    <string name="label_follow">Follow</string>
+    <string name="label_done">Done</string>
+    <string name="label_save">Save</string>
+    <string name="label_continue">Continue</string>
+    <string name="label_your_reels">Your Reels</string>
+    <string name="label_new">New</string>
+    <string name="label_new_password">New Password</string>
+    <string name="label_password">Password</string>
+    <string name="label_resend_otp">Resend OTP</string>
+    <string name="label_send_again">Send Again</string>
+    <string name="label_verify_and_proceed">Verify &amp; Proceed</string>
+    <string name="label_otp_verification">OTP Verification</string>
+    <string name="label_confirm_password">Confirm Password</string>
+    <string name="label_forgot_password_with_question">Forgot password?</string>
+    <string name="label_reset_password">Reset Password</string>
+    <string name="label_forgot_password">Forgot Password</string>
+    <string name="label_do_not_have_account">Don\'t have an account?</string>
+    <string name="label_already_have_an_account">Already have an account?</string>
+    <string name="label_enter_the_otp_sent_to">Enter the otp sent to\t</string>
+    <string name="label_did_not_received_the_otp">Don\'t received the otp?</string>
+    <string name="label_enter_four_digit_code">Enter 4 Digits Code</string>
+
+    <string name="msg_reset_password_type_password">Set the new password for your account so you can login and access all the features.</string>
+    <string name="msg_forgot_password_type_email">Enter your email for the verification process,\nWe will send 4 digits code on your email.</string>
+    <string name="msg_forgot_password_otp_verify">Enter the 4 digits code that you received on your email.</string>
+
+    <string name="hint_type_a_message">Type a message</string>
+    <string name="hint_type_your_email">Type Your Email</string>
+    <string name="hint_select_media_to_post">Select Image or Video to Post.</string>
+
+    <string name="hint_default_email">outgore.admin@gmail.com</string>
+    <string name="lorem_ipsum_is_simply_dummy_text">Lorem Ipsum is simply dummy text...</string>
+    <string name="baby_base">Baby Base</string>
+    <string name="other_near_places">Other Near Places</string>
+    <string name="_5_min_ago">5 min ago</string>
+    <string name="notification">Notification</string>
+    <string name="likes">Likes</string>
+    <string name="search">Search</string>
+    <string name="min">8 min</string>
+    <string name="reply">Reply</string>
+    <string name="type_a_comment">Type a comment...</string>
+    <string name="today">Today</string>
+    <string name="dance_party">Dance Party</string>
+    <string name="see_all">See All</string>
+
+    <string name="label_contact_support">Contact Support</string>
+    <string name="label_not_now">Not Now</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="label_join">Join</string>
+    <string name="label_unjoin">Joined</string>
+
+    <string name="empty_name">Please enter name</string>
+    <string name="empty_email">Please enter email address</string>
+    <string name="invalid_email">Please enter valid email address</string>
+    <string name="empty_password">Please enter password</string>
+    <string name="confirm_your_password">Confirm your password</string>
+    <string name="password_minimum_length">Password length must be at least 8 chars</string>
+    <string name="msg_password_should_match">Password should match</string>
+    <string name="msg_enter_otp">Enter Confirmation Code</string>
+    <string name="msg_invalid_otp">Invalid Confirmation Code</string>
+    <string name="msg_agree_terms">Please agree to terms &amp; condition, privacy policy and user agreement</string>
+
+    <string name="msg_some_permission_denied">Some permissions were denied</string>
+    <string name="msg_permission_denied">Permission denied</string>
+    <string name="error_in_finding_file_path">Error in finding file path</string>
+    <string name="msg_permission_permanently_denied">Permissions is permanently denied, please manually grant permissions</string>
+
+    <string name="label_all_photos">All Photos</string>
+    <string name="label_all_videos">All Videos</string>
+    <string name="label_albums">Albums</string>
+    <string name="label_select_video">Select Video</string>
+    <string name="msg_there_are_no_photos">No photos found</string>
+    <string name="msg_there_are_no_videos">No videos found</string>
+    <string name="msg_there_are_no_media">No media found</string>
+    <string name="msg_error_in_retrieving_selected_video_path">Error in retrieving selected video path</string>
+    <string name="suggested_for_you">Suggested For You</string>
+    <string name="post_like"> %1$d Likes</string>
+    <string name="comment_hint"> Reply to %1$s</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="forward">Forward</string>
+    <string name="copy">Copy</string>
+
+    <string name="select_your_location">Select Your Location</string>
+    <string name="confirm_location">Confirm Location</string>
+    <string name="address_not_found">Address not found</string>
+    <string name="label_delete">Delete</string>
+    <string name="label_capture_photo">Capture Photo</string>
+    <string name="label_record_video">Record Video</string>
+    <string name="label_post">Post</string>
+    <string name="label_more">… more</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="label_is_with">is with</string>
+    <string name="label_other">Other</string>
+    <string name="label_and">and</string>
+    <string name="label_add_to_your_story">Add to your story</string>
+
+    <string name="temp_text_tag_post"><b>Ruffels</b> is with @Baby Base, @Naughty Miss and <font color='#BF5AF2'>10 others</font></string>
+
+    <string name="label_offline">Offline</string>
+    <string name="default_notification_channel_id">default_notification_channel_id</string>
+    <string name="msg_location_permission_required_for_venue">Location permission is required to show near by venues.</string>
+    <string name="label_all">All Categories</string>
+    <string name="label_all_i">All</string>
+    <string name="label_miles">kms</string>
+    <string name="label_kms">kms</string>
+
+    <string name="msg_you_have_no_any_like_users">You have no any like users.</string>
+    <string name="msg_no_data_comment_post">No Comments yet!</string>
+    <string name="msg_no_data_comment_sponty">No any comments on\nthis sponty</string>
+    <string name="msg_no_data_comment_reel">This reel has no comment yet !</string>
+    <string name="msg_no_data_tag_people">You don\'t have\nany follower yet</string>
+
+    <string name="msg_no_data_follower">No followers found</string>
+    <string name="msg_no_data_mutual">No mutual friends found</string>
+    <string name="msg_no_data_following">Not following anyone yet</string>
+
+    <string name="msg_no_data_notification">You have no any notifications!</string>
+
+    <string name="no_reels_found">No reels found</string>
+    <string name="no_posts_found">No posts found</string>
+    <string name="no_favourite_venues_yet">No Favourite Venues Yet!</string>
+
+    <string name="msg_gps_settings">GPS is settings</string>
+    <string name="msg_gps_settings_confirmation">GPS is not enabled. Do you want to go to settings menu?</string>
+    <string name="label_settings">Settings</string>
+    <string name="label_blocked_accounts">Blocked accounts</string>
+
+    <string name="label_video">Video</string>
+    <string name="label_latest_events">Latest Events</string>
+
+    <string name="label_edit">Edit</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="crop_image_activity_title"></string>
+    <string name="crop_image_menu_rotate_left">Rotate counter clockwise</string>
+    <string name="crop_image_menu_rotate_right">Rotate</string>
+    <string name="crop_image_menu_crop">Crop</string>
+    <string name="crop_image_menu_flip">Flip</string>
+    <string name="crop_image_menu_flip_horizontally">Flip horizontally</string>
+    <string name="crop_image_menu_flip_vertically">Flip vertically</string>
+    <string name="pick_image_intent_chooser_title">Select source</string>
+    <string name="crop_image_activity_no_permissions">Cancelling, required permissions are not granted</string>
+
+    <string name="msg_can_not_create_destination_file">Can not create destination file</string>
+
+    <string name="top">Top</string>
+    <string name="users">Users</string>
+    <string name="people">People</string>
+    <string name="accounts">Accounts</string>
+    <string name="recent_reels">Recent Reels</string>
+
+    <string name="places">Places</string>
+    <string name="label_username">Username</string>
+    <string name="label_what_are_your_plans">What\'s you plan for today?</string>
+    <string name="empty_username">Please enter username</string>
+    <string name="msg_username_not_length">Username should be at least 3 char long</string>
+    <string name="msg_username_already_taken_please_for_try_another">Username already taken please for try another</string>
+    <string name="no_places_found">No places found</string>
+    <string name="no_post_and_reels_found">Post and reels\nnot found</string>
+    <string name="no_users_found">No users found</string>
+    <string name="label_error_profile">Please select profile picture</string>
+    <string name="video_rooms">Video Rooms</string>
+    <string name="create_room">Create Room</string>
+    <string name="live_venue_rooms">Live Venue Rooms</string>
+    <string name="label_live">Live</string>
+    <string name="watching_count_default">0 Watching</string>
+    <string name="label_live_settings">Live Settings</string>
+    <string name="label_event_name">Event Name</string>
+    <string name="label_make_event_private">Make Event Private</string>
+    <string name="label_enter_password">Enter Password</string>
+    <string name="label_enter_confirm_password">Enter Confirm Password</string>
+    <string name="label_request_join">Request Join</string>
+    <string name="label_request_to_join_your_live">Request to join your live</string>
+    <string name="label_accept">Accept</string>
+    <string name="label_reject">Reject</string>
+    <string name="label_private_event_join">Private Event Join</string>
+    <string name="label_enter_private_event_password">Enter private event password</string>
+    <string name="label_invite_friends">Invite Friends</string>
+    <string name="label_invite">Invite</string>
+    <string name="label_allow_other_users_join">Allow Other Users Join</string>
+    <string name="msg_are_you_sure_do_want_end_this_event">Are you sure you want to end this event?</string>
+    <string name="label_live_stream">Live Stream</string>
+    <string name="label_yes">Yes</string>
+    <string name="label_no">No</string>
+    <string name="msg_enter_event_name">Please enter event name</string>
+    <string name="label_watching">Watching</string>
+    <string name="label_invited">Invited</string>
+    <string name="label_users_watching">Users Watching</string>
+    <string name="no_live_venue_available_at_this_moment">No Live Venue available at this moment</string>
+    <string name="no_live_user_found">No Live User found</string>
+    <string name="label_remove">Remove</string>
+    <string name="msg_kick_user">You are kicked out from live event.</string>
+    <string name="label_event_start_date">Start Date and Time</string>
+    <string name="label_event_add_date">Add Date &amp; Time</string>
+    <string name="label_event_end_date">End Date and Time</string>
+    <string name="label_Add">Add</string>
+    <string name="label_event_location">Event Location</string>
+    <string name="label_location">Location</string>
+    <string name="label_add_media">Add Media</string>
+    <string name="label_upload">Upload</string>
+    <string name="msg_max_video_count">You can upload maximum 1 video at a time</string>
+    <string name="msg_max_1_photo_count">You can upload maximum 1 photos at a time</string>
+    <string name="msg_max_2_photo_count">You can upload maximum 2 photos at a time</string>
+    <string name="msg_max_photo_count">You can upload maximum 3 photos at a time</string>
+    <string name="msg_max_media_count">You can upload maximum 5 media at a time</string>
+    <string name="msg_max_video_2_count">You can upload maximum 2 videos at a time</string>
+    <string name="msg_media_upload_is_in_progress">Please wait media upload is in progress</string>
+    <string name="label_deactivate_profile">Deactivate Account</string>
+    <string name="label_request_to_join">Request to Join</string>
+    <string name="label_requested_for_join">Requested for Join</string>
+    <string name="label_create">Create</string>
+    <string name="label_activate_account">Activate Account</string>
+    <string name="msg_activate_account">Enter the email associated with your account and we\'ll send request to admin.</string>
+    <string name="label_submit">Submit</string>
+    <string name="label_reason_optional">Reason (Optional)</string>
+    <string name="label_deactivate">Deactivate</string>
+    <string name="msg_deactivate_profile">Are you sure you want to deactivate profile?</string>
+    <string name="msg_preparing_link_wait_for_moment">Preparing link, Wait for a moment…</string>
+
+    <!-- VIDEO EDITOR TOKEN -->
+    <!-- Please contact Banuba https://www.banuba.com/video-editor-sdk to get this token -->
+
+    <!-- AUDIO BROWSER MUBERT -->
+
+
+    <string name="label_discover_places">Discover places.</string>
+    <string name="label_connect_with_people">Connect with people.</string>
+    <string name="label_log_in_to_outgoer">Log in to Outgoer</string>
+    <string name="are_you_looking_for_good_night_experience">Are you looking for good night experience?</string>
+    <string name="label_continue_with_email">Continue with email</string>
+    <string name="label_continue_as_venue_login">Register as Venue</string>
+    <string name="label_continue_with_google">Continue with Google</string>
+    <string name="label_continue_with_apple">Continue with Apple</string>
+    <string name="label_sign_up_to_outgoer">Sign up to Outgoer</string>
+    <string name="label_underline_log_in"><u>Log In</u></string>
+    <string name="sampleText">Sample text <![CDATA[<a href="www.google.com">link1</a>]]></string>
+
+    <!--    <string name="text_legal_notice">By creating an account, I confirm i have read and agree to the %1$s and %2$s.</string>-->
+    <string name="text_terms_conditions">Terms of use</string>
+    <string name="text_privacy_policy">Privacy policy</string>
+    <string name="text_user_agreement">User Agreement</string>
+
+    <string name="desc_account_create">By creating an account, I confirm i have read and agree to the %1$s and %2$s.</string>
+    <string name="account_create_info">By clicking Agree &amp; Join or Continue, you agree to Outgoer\'s %1$s, %2$s and %3$s.</string>
+    <string name="label_no_posts_yet">No Posts yet!</string>
+    <string name="label_no_search_result">No Search Result Found</string>
+    <string name="label_no_upcoming_event_yet">No upcoming event yet!</string>
+    <string name="label_no_ongoing_event_yet">No ongoing event yet!</string>
+    <string name="label_no_reels_yet">No Reels yet!</string>
+    <string name="label_create_sponty">Create sponty</string>
+    <string name="show_your_friends_some_of_your_recent_experiences">Show your friends some of your recent \nexperiences</string>
+    <string name="label_favourites_venues">Favourites venues</string>
+    <string name="label_account">Account</string>
+    <string name="label_privacy">Privacy</string>
+    <string name="label_terms_and_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="label_log_out">Log out</string>
+    <string name="label_title">Title</string>
+    <string name="label_discover">Discover</string>
+    <string name="label_feed">Feed</string>
+    <string name="label_sponty">Sponty</string>
+    <string name="label_hashtag">#hashtag</string>
+    <string name="label_notifications">Notifications</string>
+    <string name="label_general">General</string>
+    <string name="label_activity">Activity</string>
+    <string name="label_no_notifications_yet">No notifications yet</string>
+    <string name="notification_about_your_activity_will_show_up_here">Notification about your activity will show up \nhere.</string>
+    <string name="label_connect">Connect</string>
+    <string name="label_chats">Chats</string>
+    <string name="label_people_nearby">People Nearby</string>
+    <string name="label_user_name">User name</string>
+    <string name="label_you_don_t_have_any_message_yet">You don\'t have any message yet</string>
+    <string name="label_create_new_message">Create new message</string>
+    <string name="label_messages">Messages</string>
+    <string name="label_find_friends">Find Friends</string>
+    <string name="label_joined_user">Joined Users</string>
+    <string name="label_new_message">New message</string>
+    <string name="new_label_type_a_message">Type a message</string>
+    <string name="hint_jessica_brown">Jessica Brown</string>
+    <string name="hint_friday">Friday</string>
+    <string name="label_create_account_or_log_in">Create account or log in</string>
+    <string name="label_poll">Poll</string>
+    <string name="label_created_by">Created by</string>
+    <string name="label_venues">Venues</string>
+    <string name="label_events">Events</string>
+    <string name="label_event">Event</string>
+    <string name="label_posts">Posts</string>
+    <string name="label_reviews">Reviews</string>
+    <string name="label_no_reviews">No Reviews!</string>
+    <string name="label_no_events_yet">No Events Yet!</string>
+    <string name="label_no_photos_yet">No Photos Yet!</string>
+    <string name="label_photos">Photos</string>
+    <string name="label_add_photo">Add media</string>
+    <string name="label_add_review">Add Review</string>
+    <string name="label_please_enter_review">Please your reviews</string>
+    <string name="label_publish">Publish</string>
+    <string name="label_review">Review</string>
+    <string name="hint_add_review">Share details about your experience in this place</string>
+    <string name="label_upcoming_events">Upcoming events</string>
+    <string name="label_ongoing_events">Ongoing events</string>
+    <string name="label_explore">Explore</string>
+    <string name="label_share">Share</string>
+    <string name="desc_profile">Share your experiences with your community</string>
+    <string name="desc_map">Discover places and events</string>
+    <string name="desc_chat">Chat with your friends, and meet new people</string>
+    <string name="hint_describe_your_experience">Describe your experience</string>
+    <string name="label_add_hashtags">Add hashtags</string>
+    <string name="label_more_information">More information</string>
+    <string name="label_description">Description</string>
+    <string name="label_enter_hashtag">Enter Hashtag</string>
+    <string name="label_int_zero">0</string>
+    <string name="label_please_enter_your_plan">The caption field is required.</string>
+    <string name="label_location_field_or_venue_is_required">The Location or Venue field is required. </string>
+    <string name="label_date_time_is_required">The date time field is required.</string>
+
+    <string name="label_signup" translatable="false">signup</string>
+    <string name="label_signin" translatable="false">signin</string>
+    <string name="label_signin_sheet" translatable="false">signin_bottomsheet</string>
+    <string name="label_forgot_password_b" translatable="false">forgot_password</string>
+
+    <string name="feeling_spontaneous">Feeling Spontaneous?</string>
+    <string name="tell_your_friends_about_your_plans">Tell your friends about your plans</string>
+
+    <string name="create_event">Create Event</string>
+    <string name="label_add_event_name">Add event name</string>
+    <string name="label_event_description">About</string>
+    <string name="label_write_a_event_description">Write a event description...</string>
+
+    <string name="label_mode_of_event">Mode of event</string>
+
+    <string name="label_request">Request</string>
+    <string name="label_requested">Requested</string>
+    <string name="label_join_Request">Join Event</string>
+    <string name="label_more_info">More Info</string>
+    <string name="label_advertisement_video">Advertisement Video</string>
+    <string name="label_this_video_appears_in_reels">This video appears in reels</string>
+    <string name="label_add_media_here">Add Media</string>
+    <string name="label_join_event">Join Event</string>
+    <string name="label_approve">Approve</string>
+    <string name="label_rejected">Rejected</string>
+    <string name="label_this_event_join_request_has_been_approved">This event Join request has been approved!</string>
+
+    <string name="error_event_name">Please enter event name</string>
+    <string name="error_event_description">Please enter event description</string>
+    <string name="error_event_date">Please select start event date</string>
+    <string name="error_event_time">Please select end event time</string>
+    <string name="error_select_venue">Please select Venue</string>
+    <string name="error_event_add_media">Please choose at least one media for event</string>
+    <string name="label_event_start_date_1">Event Start Date</string>
+    <string name="label_event_end_date_1">Event End Date</string>
+    <string name="label_create_group">Create Group</string>
+    <string name="label_create_new_group">Create New Group</string>
+    <string name="label_add_new_participants">Add New Participants</string>
+    <string name="label_selected_items">0 of 1000 Selected</string>
+    <string name="label_selected_items_new">of 1000 Selected</string>
+    <string name="label_participants">Participants : </string>
+    <string name="label_write_a_description">Write a description</string>
+    <string name="label_type_group_name">Type group name...</string>
+    <string name="label_edit_group">Edit Group</string>
+    <string name="label_the_squad">The Squad</string>
+    <string name="label_12_participants">12 Participants</string>
+    <string name="label_participants_postfix"> Participants</string>
+    <string name="label_dummy">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard.</string>
+    <string name="label_admin_c">Admin</string>
+    <string name="label_hold_for_record">Hold for record</string>
+    <string name="label_release_for_end_record">Release for end record</string>
+    <string name="label_start_Record">Start Record</string>
+    <string name="label_stop_Record">Stop Record</string>
+    <string name="label_send_Record">Send Record</string>
+    <string name="label_you_Can_listen_Record">You can listen record</string>
+    <string name="label_chat">chat</string>
+    <string name="label_group">group</string>
+    <string name="label_enter_group_name">Please enter group name</string>
+    <string name="label_enter_group_description">Please enter group description</string>
+    <string name="label_select_group_image">Please select group profile</string>
+    <string name="label_make_group_admin">Make group admin</string>
+    <string name="label_remove_">Remove </string>
+    <string name="label_dismiss_as_admin">Dismiss as Admin</string>
+    <string name="label_add_participants">Add Participants </string>
+    <string name="label_delete_">Delete </string>
+    <!--    <string name="label_delete_are_you_sure_you_want_to_delete">Are you sure do you want to delete group? </string>-->
+    <string name="label_delete_are_you_sure_you_want_to_delete">Are you sure do you want to delete  chat? </string>
+    <string name="label_delete_are_you_sure_you_want_to_delete_chat">Are you sure do you want to delete chat? </string>
+    <string name="label_delete_are_you_sure_you_want_to_delete_groupchat">Are you sure do you want to delete Group chat? </string>
+    <string name="label_are_you_sure_you_want_to_delete_audio">Are you sure do you want to delete Audio ? </string>
+    <string name="label_are_you_sure_you_want_to_delete">Are you sure do you want to delete ? </string>
+    <string name="label_are_you_sure_you_want_to_delete_post">Are you sure do you want to delete Post ? </string>
+    <string name="label_are_you_sure_you_want_to_delete_reels">Are you sure do you want to delete Reels? </string>
+    <string name="label_are_you_sure_you_want_to_delete_comment">Are you sure do you want to delete Comment? </string>
+    <string name="label_are_you_sure_you_want_to_delete_sponty">Are you sure do you want to delete Sponty? </string>
+    <string name="label_register_venue">Register Venue</string>
+    <string name="label_update_venue_info">Update Venue Info</string>
+    <string name="label_v_name">Name</string>
+    <string name="label_v_add_name">Add Name</string>
+    <string name="error_v_name">Please enter name</string>
+    <string name="error_v_username">Please enter user name</string>
+    <string name="label_v_phone_no">Phone Number</string>
+    <string name="label_v_add_phone_no">Add phone number</string>
+    <string name="error_v_phone_no">Please enter phone Number</string>
+    <string name="label_v_email_address">Email Address</string>
+    <string name="label_v_add_email_address">Add email address</string>
+    <string name="error_v_email_address">Please enter email address</string>
+    <string name="label_v_password">Password</string>
+    <string name="error_v_password">Please enter password</string>
+    <string name="label_v_confirm_password">Confirm Password</string>
+    <string name="error_v_confirm_password">Please enter confirm password</string>
+    <string name="error_v_password_n_confirm_password">Password and Confirm password not matched</string>
+    <string name="label_v_password_tmp">************</string>
+    <string name="label_v_venue_info">Venue Info</string>
+    <string name="label_v_venue_categories">Venue Categories</string>
+    <string name="label_v_venue_availability">Venue Availability</string>
+    <string name="error_v_venue_category">Please choose at least 1 category from list</string>
+
+    <string name="label_v_monday">Monday</string>
+    <string name="label_v_tuesday">Tuesday</string>
+    <string name="label_v_wednesday">Wednesday</string>
+    <string name="label_v_thursday">Thursday</string>
+    <string name="label_v_friday">Friday</string>
+    <string name="label_v_saturday">Saturday</string>
+    <string name="label_v_sunday">Sunday</string>
+    <string name="label_v_opens_at">Opens at</string>
+    <string name="label_v_closes_at">Closes at</string>
+    <string name="label_media">Media</string>
+    <string name="label_venue">Venue</string>
+    <string name="label_enter_description">Please enter description</string>
+    <string name="label_add_link">Add Link</string>
+    <string name="label_edit_external_link">Edit external link</string>
+    <string name="label_url">Url</string>
+    <string name="label_enter_url">Enter Url</string>
+    <string name="label_enter_title">Enter Title</string>
+    <string name="label_date_demo">mm/dd/yyyy</string>
+    <string name="label_pick_event_location">Pick Event Location</string>
+    <string name="select_category">Select Category</string>
+    <string name="please_select_category">Please Select Category</string>
+
+    <string name="label_reel">Reel</string>
+    <string name="label_feeds">Feed</string>
+
+    <string name="live">Live</string>
+    <string name="message_live">Go live, connect and share your world with us</string>
+    <string name="message_chat">Go Chat, connect and share your world with us</string>
+    <string name="message_search">Discover new experiences with our user and place search</string>
+    <string name="sponty">Sponty</string>
+    <string name="message_sponty">Capture the moment, share the experience with Sponty</string>
+    <string name="feeds">Feeds</string>
+    <string name="check_in">Check-in</string>
+    <string name="Check_In">Check In</string>
+    <string name="check_out">Check-out</string>
+    <string name="Check_Out">Check Out</string>
+    <string name="message_feeds">Discover the world through our feeds</string>
+    <string name="label_friends">Friends</string>
+
+    <string name="are_you_sure_you_want_to_logout">Are you sure, you want to Logout?</string>
+    <string name="are_you_sure_you_want_to_logout_all">Are you sure, you want to Logout all accounts?</string>
+    <string name="lable_logout">Logout</string>
+
+
+    <string name="label_friends_in_this_venue">Friends in this venue</string>
+
+    <string name="marquee_message">Currently %1$d friends are checking in this venue and %2$d friends are tagging this venue in reels/posts.</string>
+    <string name="marquee_message_checkedInCount">Currently %1$d friends are checking in this venue.</string>
+    <string name="marquee_message_taggedCount">Currently %1$d friends are tagging this venue in reels/posts.</string>
+    <string name="label_add_video">Add Video</string>
+    <string name="_0">0</string>
+    <string name="_5">/5</string>
+    <string name="media">Media</string>
+
+    <string name="tvVenueRatingCount">0.0</string>
+    <string name="tvTotalReview">(0)</string>
+    <string name="marqueeText">Hello guys !! Welcome to GeeksforGeeks Portal !!</string>
+    <string name="contentDescription">null</string>
+
+    <string name="comment"><b>%1$s</b> %2$s</string>
+    <string name="label_enter_valid_url">Enter valid Url</string>
+
+    <string name="label_photo">Photo</string>
+
+    <string name="label_why_are_you_reporting_this_user">Why are you reporting this user?</string>
+    <string name="desc_report">Your report is anonymous, except if you\'re reporting an intellectual property infringement. If someone is in immediate danger, call the local emergency services - don\'t wait.</string>
+
+
+    // deepar license key
+    <string name="deepar_license_key">cce765e75539fb3edbe1fb9f73cb59b3ae341639a81e73c3257bd9fc6429b1483dab78415b0481f1</string>
+    <string name="label_report">Report</string>
+    <string name="label_dash">-</string>
+    <string name="label_new_sign_in">Sign In</string>
+    <string name="label_share_connect_create">Share. Connect. Create</string>
+    <string name="label_create_account">Create account</string>
+    <string name="label_back">Back</string>
+    <string name="label_select_participants">Please select participants</string>
+    <string name="label_send_verification_request">Send Verification Request</string>
+    <string name="label_outgoer_verification">Outgoer Verification</string>
+    <string name="label_request_for_verification_badge">Request for verification badge</string>
+    <string name="desc_verified_user">Let your follower know that it\'s the real you with a verified badge on your profile.</string>
+    <string name="label_verified">Verified</string>
+    <string name="label_your_request_is_pending">Your request is pending</string>
+    <string name="label_congratulations_you_are_verified">Congratulations!! You are verified.</string>
+    <string name="label_error_v_phone_number">Please enter valid phone Number</string>
+    <string name="label_no_search_location_to_display">No search location to display</string>
+    <string name="label_add_time">Add Time</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="load_more">Load more</string>
+
+    <string name="location_disclosure">Outgoer collects location data to enable nearby venue/users on map, geo-location feature to check-in and check-out in venues even when the app is closed or not in the use.</string>
+    <string name="label_please_wait_until_we_upload_your_shorts">Please wait until we upload your video.</string>
+    <string name="label_is_this_private_event">Is this private event?</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="label_choose_from_gallery">Choose From Gallery</string>
+    <string name="add_music">Add Music</string>
+    <string name="search_music">Search music</string>
+    <string name="describe_your_experience">Describe your experience...</string>
+    <string name="add_hashtag">Add Hashtag</string>
+    <string name="type_hashtag_here">Type hashtag here...</string>
+    <string name="video_preview">Video Preview</string>
+    <string name="story_preview">Story Preview</string>
+    <string name="post_preview">Post Preview</string>
+    <string name="story">Story</string>
+    <string name="send">Send</string>
+    <string name="label_tag_venues">Tag Venues</string>
+    <string name="no_music">No Music</string>
+    <string name="label_upload_reels">Upload Reels</string>
+    <string name="label_upload_reel">Upload Reel</string>
+    <string name="processing">Processing...</string>
+    <string name="compressing">Compressing...</string>
+    <string name="uploading">Uploading...</string>
+    <string name="finishing_up">Finishing up</string>
+    <string name="demo_mention">\@Sneakie...</string>
+    <string name="create_story">Create story</string>
+    <string name="add_to_story">Add to story</string>
+    <string name="add_to_post">Add to Post</string>
+    <string name="add_to_sponty">Add to Sponty</string>
+    <string name="outgoer_venue">Outgoer venue</string>
+    <string name="google_venue">Google venue</string>
+    <string name="account_status">Account Status</string>
+    <string name="account_status_message">Your account has been deactivated. If you have any questions, please contact our support team for assistance.</string>
+
+    <string name="replied_to_your_story">%s replied to your story</string>
+    <string name="you_replied_to_their_story">you replied to their story</string>
+    <string name="label_saved_post_reels">Saved Post &amp; Reels</string>
+    <string name="label_no_saved_post">No Saved Posts</string>
+    <string name="label_no_saved_reels">No Saved Reels</string>
+    <string name="label_saved">Saved</string>
+    <string name="label_blocked">Blocked</string>
+    <string name="label_unblock">Unblock</string>
+
+    <string name="copy_link">Copy Link</string>
+    <string name="messages">Messages</string>
+    <string name="whatsapp">Whatsapp</string>
+    <string name="share_to_other">Share to other...</string>
+
+    <string name="search_people">Search people</string>
+    <string name="cast_message">Cast message...</string>
+    <string name="Cast_Message">Cast Message...</string>
+    <string name="casting_message">Casting Message</string>
+    <string name="no_story_view">No Story View!</string>
+    <string name="label_you">You</string>
+    <string name="label_no_people_found">No People Found!</string>
+    <string name="from_this_group">from this group</string>
+    <string name="display_location_on_map">Display Location on Map</string>
+    <string name="ic_delete">"\ue92c"</string>
+    <string name="block_message">They won\'t be able to message you or find your profile or content on outgoer.</string>
+    <string name="block_notification">They won\'t be notified that you blocked them.</string>
+    <string name="block_settings">You can unblock them at any time in Settings.</string>
+
+    <string name="block">Block</string>
+    <string name="user_agreement">User Agreement</string>
+    <string name="add_outgoer_account">Add Outgoer account</string>
+    <string name="add_account">Add account</string>
+    <string name="logout_all_accounts">Logout all accounts</string>
+
+    <string name="minimum_8_characters">Minimum 8 characters</string>
+    <string name="contains_a_number">Contains a number</string>
+    <string name="contains_uppercase_letter">Contains uppercase letter</string>
+    <string name="contains_special_character">Contains special character</string>
+    <string name="contains_same_password">Contains same password</string>
+
+    <string name="hosted_by">Hosted By</string>
+    <string name="save_your_login_info">Save your login info?</string>
+    <string name="save_your_login_info_message">We will save the login info for you, so you won\'t need to enter it on your iCould® devices next time that you log in.</string>
+
+    <string name="try_again">Try Again</string>
+    <string name="no_internet_desc">No internet connection found. Please\ncheck your internet connection..</string>
+    <string name="oops">Oops!</string>
+    <string name="trending_venues">Trending Venues</string>
+
+    <string name="label_blocked_user_not_found_yet">Blocked user not found yet!</string>
+    <string name="reacted_message">%s to your message</string>
+    <string name="reactions">Reactions</string>
+    <string name="tap_to_remove">Tap to remove</string>
+</resources>

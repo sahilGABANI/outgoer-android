@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/myLocation"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:layout_below="@+id/castingMessageFrameLayout"
+        android:src="@drawable/user_location" />
+
+    <FrameLayout
+        android:id="@+id/venuePinFrameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_below="@+id/castingMessageFrameLayout"
+        android:layout_centerInParent="true">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivUserProfile1"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_54sdp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_ic_image" />
+
+
+<!--        android:background="@drawable/ring_gredient_color"-->
+        <FrameLayout
+            android:id="@+id/taggedUserFrameLayout"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivUserProfile"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/venue_placeholder"
+                android:visibility="visible"
+                android:layout_gravity="center"
+                app:riv_border_color="@color/white"
+                app:riv_border_width="@dimen/_2sdp"
+                app:riv_oval="true" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/countAppCompatTextView"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/rounded_blue"
+                android:fontFamily="@font/nunito_sans_semi_bold"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/md_white"
+                android:textSize="@dimen/_9sdp"
+                android:visibility="gone"
+                tools:text="21.2" />
+
+        </FrameLayout>
+
+
+        <!--        <pl.bclogic.pulsator4droid.library.PulsatorLayout-->
+        <!--            android:id="@+id/pulsator"-->
+        <!--            android:layout_width="@dimen/_100sdp"-->
+        <!--            android:layout_height="@dimen/_100sdp"-->
+        <!--            android:layout_alignParentTop="true"-->
+        <!--            android:layout_centerHorizontal="true"-->
+        <!--            app:pulse_color="#CA3D3D"-->
+        <!--            app:pulse_count="6"-->
+        <!--            app:pulse_duration="700"-->
+        <!--            app:pulse_interpolator="AccelerateDecelerate"-->
+        <!--            app:pulse_repeat="0"-->
+        <!--            app:pulse_startFromScratch="false">-->
+
+        <!--        </pl.bclogic.pulsator4droid.library.PulsatorLayout>-->
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPin"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_place_holder_pin_map"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDistance"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_sans_semi_bold"
+        android:gravity="center"
+        android:maxLines="2"
+        android:layout_marginTop="-10dp"
+        android:textColor="@color/md_white"
+        android:textSize="@dimen/_9ssp"
+        tools:text="21.2 mile"
+        android:layout_below="@+id/venuePinFrameLayout"/>
+
+
+    <FrameLayout
+        android:id="@+id/castingMessageFrameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-14dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/markerEdgeAppCompatImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:src="@drawable/half_circle_blue"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/castMessageAppCompatTextView"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_sans_semi_bold"
+            android:gravity="center"
+            android:maxLines="2"
+            android:visibility="gone"
+            android:ellipsize="end"
+            android:textColor="@color/md_white"
+            android:textSize="@dimen/_8ssp"
+            android:background="@drawable/blue_gredient_color"
+            android:paddingVertical="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:paddingHorizontal="@dimen/_6sdp"
+            tools:text="Lorem Ipsum is simply dum..." />
+
+    </FrameLayout>
+</RelativeLayout>

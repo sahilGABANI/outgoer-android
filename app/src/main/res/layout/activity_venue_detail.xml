@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.venuedetail.VenueDetailActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.outgoer.base.view.MyCollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_action"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:toolbarId="@+id/toolbarView">
+
+                <LinearLayout
+                    android:id="@+id/llVenueImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivVenueImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_200sdp"
+                        android:background="@drawable/venu_detail_bottom_rounded_corner_image"
+                        android:scaleType="centerCrop"
+                        tools:src="@drawable/ic_place_holder_post" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvVenueGallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="5"
+                        tools:listitem="@layout/view_venue_detail_gallery" />
+
+                    <LinearLayout
+                        android:id="@+id/llVenueInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:orientation="vertical"
+                        app:layout_collapseMode="pin">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_14sdp"
+                                android:layout_marginEnd="@dimen/_14sdp">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvVenueName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginEnd="@dimen/_12sdp"
+                                    android:layout_toStartOf="@id/ivVenueCategoryImage"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/nunito_sans_semi_bold"
+                                    android:maxLines="2"
+                                    android:textColor="@color/md_white"
+                                    android:textSize="@dimen/_14ssp"
+                                    android:textStyle="bold"
+                                    tools:text="The Love Shack" />
+
+                                <com.makeramen.roundedimageview.RoundedImageView
+                                    android:id="@+id/ivVenueCategoryImage"
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:layout_alignParentEnd="true"
+                                    app:riv_border_color="@color/color08163C"
+                                    app:riv_corner_radius="@dimen/_4sdp"
+                                    app:riv_oval="false"
+                                    tools:src="@drawable/ic_place_holder_post" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_14sdp"
+                                android:layout_marginTop="@dimen/_12sdp"
+                                android:layout_marginEnd="@dimen/_14sdp">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvAddress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_12sdp"
+                                    android:layout_toStartOf="@+id/llDistance"
+                                    android:ellipsize="end"
+                                    android:lines="2"
+                                    android:maxLines="2"
+                                    android:textColor="@color/white_50_opacity"
+                                    android:textSize="@dimen/_10ssp"
+                                    tools:text="Lorem Ipsum is simply dm Ipsum is simply dimply dummy text dm Ipsum is simply dimply dummy text dm Ipsum is simply dimply dummy text" />
+
+                                <LinearLayout
+                                    android:id="@+id/llDistance"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvDistance"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="@dimen/_6sdp"
+                                        android:gravity="center_vertical|end"
+                                        android:maxLines="1"
+                                        android:textColor="@color/md_white"
+                                        android:textSize="@dimen/_9ssp"
+                                        tools:text="1 mile" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/ivDirection"
+                                        android:layout_width="@dimen/_24sdp"
+                                        android:layout_height="@dimen/_24sdp"
+                                        android:src="@drawable/ic_map_direction" />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/one_dp"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            android:background="@color/white_10_opacity" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorFullTransparent"
+                    app:layout_collapseMode="pin"
+                    app:navigationIcon="@drawable/ic_profile_back" />
+
+            </com.outgoer.base.view.MyCollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvVenueDetailList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_16sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

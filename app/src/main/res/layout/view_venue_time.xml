@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/timeAppCompatTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_clock"
+        android:drawablePadding="@dimen/_8sdp"
+        android:drawableTint="@color/grey_light"
+        android:ellipsize="end"
+        android:fontFamily="@font/inter_regular"
+        android:maxLines="1"
+        android:paddingVertical="@dimen/_6sdp"
+        android:textColor="@color/grey_light"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="10:30 PM - 03:30 AM " />
+
+    <View
+        android:id="@+id/viewClose"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="@color/grey_medium"
+        app:layout_constraintTop_toBottomOf="@+id/timeAppCompatTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

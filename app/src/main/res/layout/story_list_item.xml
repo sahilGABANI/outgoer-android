@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_84sdp"
+    android:layout_height="@dimen/_140sdp">
+
+    <RelativeLayout
+        android:id="@+id/storyItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="@dimen/_4sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/lastStoryRoundedImageView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:background="@drawable/bg_purple_just_border"
+            android:padding="@dimen/_2sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/venue_placeholder"
+            app:riv_corner_radius="@dimen/_8sdp" />
+
+        <LinearLayout
+            android:id="@+id/venueLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_purple_top_border"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:paddingVertical="@dimen/_4sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_11sdp"
+                android:layout_height="@dimen/_11sdp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/_1sdp"
+                android:padding="@dimen/_1sdp"
+                android:src="@drawable/new_home_footer_location"
+                android:tint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mentionAppCompatTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/inter_regular"
+                android:includeFontPadding="false"
+                android:lines="1"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingEnd="@dimen/_12sdp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="dasdsadasdasdasdasdasdas"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_8ssp"
+                tools:text="@string/demo_mention" />
+
+        </LinearLayout>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/venueProfileRoundedImageView"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:background="@drawable/bg_purple_border"
+            android:padding="@dimen/_1sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/venue_placeholder"
+            app:riv_corner_radius="@dimen/_12sdp" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/userProfileRoundedImageView"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_above="@+id/userNameAppCompatTextView"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_purple_border_story"
+            android:padding="@dimen/_4sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/venue_placeholder"
+            app:riv_corner_radius="@dimen/_12sdp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/userNameAppCompatTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:paddingTop="@dimen/_1sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_8ssp"
+            tools:text="@string/demo_mention" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/createStoryLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="@dimen/_4sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_purple_just_border"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_84sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:background="@drawable/bg_add_story"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_add_story_plus"/>
+
+            </FrameLayout>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/userProfileImageView"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_66sdp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/bg_purple_border_story"
+                android:padding="@dimen/_4sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_chat_user_placeholder"
+                app:riv_corner_radius="@dimen/_12sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/createProfileAppCompatTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginVertical="@dimen/_8sdp"
+                android:fontFamily="@font/inter_medium"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:paddingHorizontal="@dimen/_4sdp"
+                android:text="@string/create_story"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorFullTransparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:gravity="end"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:minEms="6"
+            android:padding="@dimen/_4sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            android:visibility="gone"
+            tools:text="Mar, 14 2022"
+            android:fontFamily="@font/inter_regular"
+            tools:visibility="visible" />
+
+        <FrameLayout
+            android:id="@+id/videoThumbFrameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivMediaView"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="@dimen/_170sdp"
+                android:layout_margin="@dimen/_2sdp"
+                android:padding="@dimen/_2sdp"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius="@dimen/_4sdp"
+                tools:src="@drawable/ic_place_holder_post" />
+
+
+            <LinearLayout
+                android:id="@+id/postTypeLinearLayout"
+                android:layout_width="@dimen/_106sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:background="@drawable/bg_grey_top_border"
+                android:padding="@dimen/_4sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp"
+                android:orientation="horizontal">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivUserProfile"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:background="@drawable/ring_gredient_color"
+                    android:padding="@dimen/_1sdp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_chat_user_placeholder"
+                    app:riv_border_width="@dimen/zero_dp"
+                    app:riv_corner_radius="@dimen/_26sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_toEndOf="@+id/profileFrameLayout"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/llUsernameWithLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvUsername"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/inter_semi_bold"
+                            android:maxLength="15"
+                            android:maxLines="1"
+                            android:textColor="@color/md_white"
+                            android:textSize="@dimen/_8ssp"
+                            android:textStyle="bold"
+                            tools:text="Username" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivVerified"
+                            android:layout_width="@dimen/_10sdp"
+                            android:layout_height="@dimen/_10sdp"
+                            android:src="@drawable/ic_user_verificatied_badge"
+                            android:layout_marginStart="@dimen/_3sdp"
+                            android:layout_gravity="center_vertical"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/half_dp"/>
+
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/half_dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/white_50_opacity"
+                        android:textSize="@dimen/_6ssp"
+                        tools:text="United States of America" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/reelTypeAppCompatImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|bottom"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:padding="@dimen/_4sdp"
+                android:src="@drawable/ic_reels_icon_saved" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="-10dp">
+
+            <LinearLayout
+                android:id="@+id/likeLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical|end"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:visibility="gone"
+                android:backgroundTint="@color/grey_light"
+                android:background="@drawable/rounded_like_bg">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_thumbs_up" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/likeCountAppCompatTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/white"
+                    android:text="1"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_2sdp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loveLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_gravity="center_vertical|end"
+                android:paddingVertical="@dimen/_2sdp"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:visibility="gone"
+                android:backgroundTint="@color/grey_light"
+                android:background="@drawable/rounded_like_bg">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:src="@drawable/ic_like_heart" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/loveCountAppCompatTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/white"
+                    android:text="1"
+                    android:layout_marginStart="@dimen/_2sdp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/laughingLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_gravity="center_vertical|end"
+                android:paddingVertical="@dimen/_2sdp"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:visibility="gone"
+                android:backgroundTint="@color/grey_light"
+                android:background="@drawable/rounded_like_bg">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:src="@drawable/ic_laughing" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/laughingCountAppCompatTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/white"
+                    android:text="1"
+                    android:layout_marginStart="@dimen/_2sdp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/expressionLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_gravity="center_vertical|end"
+                android:paddingVertical="@dimen/_2sdp"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:visibility="gone"
+                android:backgroundTint="@color/grey_light"
+                android:background="@drawable/rounded_like_bg">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:src="@drawable/ic_shock_emoji" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/expressionCountAppCompatTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/white"
+                    android:text="1"
+                    android:layout_marginStart="@dimen/_2sdp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sadLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_gravity="center_vertical|end"
+                android:paddingVertical="@dimen/_2sdp"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:visibility="gone"
+                android:backgroundTint="@color/grey_light"
+                android:background="@drawable/rounded_like_bg">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:src="@drawable/ic_sad_emoji" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/sadCountAppCompatTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/white"
+                    android:text="1"
+                    android:layout_marginStart="@dimen/_2sdp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/prayLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_gravity="center_vertical|end"
+                android:paddingVertical="@dimen/_2sdp"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:visibility="gone"
+                android:backgroundTint="@color/grey_light"
+                android:background="@drawable/rounded_like_bg">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:src="@drawable/ic_hive_five" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/prayCountAppCompatTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/white"
+                    android:text="1"
+                    android:layout_marginStart="@dimen/_2sdp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/timeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white_50_opacity"
+                android:textSize="@dimen/_9ssp"
+                tools:text="1:00 PM" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivReadStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:src="@drawable/ic_chat_single_tick" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

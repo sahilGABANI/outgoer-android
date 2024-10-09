@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorFullTransparent"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="@dimen/zero_dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:background="@drawable/new_login_edittext_background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llVenueInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivVenueImage"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:foreground="@drawable/venue_image_overlay"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_place_holder_post"
+                    app:riv_corner_radius="@dimen/_6sdp"
+                    app:riv_oval="false" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivVenueCategoryImage"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_place_holder_post"
+                    app:riv_border_color="@color/color08163C"
+                    app:riv_border_width="@dimen/_2sdp"
+                    app:riv_oval="true" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvVenueCategoryName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/nunito_sans_semi_bold"
+                        android:maxLines="1"
+                        android:layout_gravity="center"
+                        android:textColor="@color/md_white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold"
+                        tools:text="The Love Shack" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivMore"
+                        android:layout_width="@dimen/_28sdp"
+                        android:layout_height="@dimen/_28sdp"
+                        android:padding="@dimen/_6sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:rotation="90"
+                        android:src="@drawable/ic_reel_more" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/reviewAppCompatTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_11ssp"
+                            android:text="4.0" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginHorizontal="@dimen/_4sdp"
+                            android:tint="@color/blue"
+                            android:src="@drawable/ic_rating_star_filled" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/distanceAppCompatTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:textColor="@color/white_50_opacity"
+                            android:textSize="@dimen/_9ssp"
+                            tools:text="19km" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/checkJoinMaterialButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/firstRoundedImageView"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:src="@drawable/venue_3"
+                            android:padding="@dimen/_1sdp"
+                            android:background="@drawable/grey_semi_transparent"
+                            app:riv_corner_radius="@dimen/_16sdp" />
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/secondRoundedImageView"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:background="@drawable/grey_semi_transparent"
+                            android:layout_marginStart="@dimen/_14sdp"
+                            android:padding="@dimen/_1sdp"
+                            android:src="@drawable/venue_2"
+                            app:riv_corner_radius="@dimen/_16sdp" />
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/thirdRoundedImageView"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:background="@drawable/grey_semi_transparent"
+                            android:layout_marginStart="@dimen/_28sdp"
+                            android:padding="@dimen/_1sdp"
+                            android:src="@drawable/venue_3"
+                            app:riv_corner_radius="@dimen/_16sdp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</merge>

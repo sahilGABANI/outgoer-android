@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">4.195.130.27</domain>
+<!--        <domain includeSubdomains="true">4.147.224.29</domain>-->
+        <domain includeSubdomains="true">dev.outgoerapp.com</domain>
+        <domain includeSubdomains="true">outgoerapp.com</domain>
+    </domain-config>
+</network-security-config>

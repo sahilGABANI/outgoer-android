@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:tag="NewReelsFragmentTag"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:id="@+id/headerTab"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_15sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_gravity="center"
+            android:paddingVertical="@dimen/_5sdp"
+            android:src="@drawable/ic_new_logo" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="128dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center"
+            android:paddingVertical="@dimen/_5sdp"
+            android:src="@drawable/ic_outgoer_text_logo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:src="@drawable/ic_search"
+            android:layout_marginTop="@dimen/_2sdp"/>
+
+
+        <RelativeLayout
+            android:id="@+id/flNotification"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/ic_new_notification"
+                android:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/notifCountAppCompatTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:background="@drawable/ic_unread_badge"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_7ssp"
+                android:visibility="gone"
+                tools:text="+99"
+                tools:visibility="visible"
+                android:minWidth="@dimen/_12sdp"
+                android:minHeight="@dimen/_12sdp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/flChat"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/ic_new_home_message"
+                android:tint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/messageCountAppCompatTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:background="@drawable/ic_unread_badge"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_7ssp"
+                android:visibility="gone"
+                tools:text="22"
+                tools:visibility="visible"
+                android:minWidth="@dimen/_12sdp"
+                android:minHeight="@dimen/_12sdp"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/tabBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headerTab"
+        android:background="@color/black">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            style="@style/CustomTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            app:tabBackground="@color/transparent"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/newColorAccent"
+            app:tabIndicatorHeight="@dimen/_1sdp"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextAppearance="@style/NewHomeReelsTabLayoutTextAppearance"
+            app:tabTextColor="@color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/half_dp"
+            android:layout_gravity="bottom"
+            android:background="@color/white_10_opacity" />
+    </FrameLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabBar" />
+
+</RelativeLayout>

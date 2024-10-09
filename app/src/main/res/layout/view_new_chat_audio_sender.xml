@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorFullTransparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:gravity="end"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:maxLines="1"
+            android:minEms="6"
+            android:padding="@dimen/_4sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            android:visibility="gone"
+            tools:text="Mar, 14 2022"
+            tools:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/audioLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginStart="@dimen/_80sdp"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:layout_toEndOf="@+id/ivUserProfileImage"
+            android:background="@drawable/new_chat_receiver_text_background"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/actionFrameLayout"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_12sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/playAudioAppCompatImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_play_icon" />
+
+                <ProgressBar
+                    android:id="@+id/progressbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingHorizontal="@dimen/_4sdp">
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:id="@+id/visualizer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:enabled="false"
+                    android:progressBackgroundTint="@color/color_363638" />
+
+                <!--                <com.masoudss.lib.WaveformSeekBar-->
+                <!--                    android:id="@+id/visualizer"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    app:marker_color="@color/red"-->
+                <!--                    app:marker_text_color="@color/colorAccent"-->
+                <!--                    app:marker_text_padding="2dp"-->
+                <!--                    app:marker_text_size="12dp"-->
+                <!--                    app:marker_width="1dp"-->
+                <!--                    app:wave_background_color="@color/white"-->
+                <!--                    app:wave_corner_radius="2dp"-->
+                <!--                    app:wave_gap="2dp"-->
+                <!--                    app:wave_gravity="center"-->
+                <!--                    app:wave_max_progress="100"-->
+                <!--                    app:wave_min_height="5dp"-->
+                <!--                    app:wave_padding_Bottom="2dp"-->
+                <!--                    app:wave_padding_left="2dp"-->
+                <!--                    app:wave_padding_right="2dp"-->
+                <!--                    app:wave_padding_top="2dp"-->
+                <!--                    app:wave_progress="0"-->
+                <!--                    app:wave_progress_color="@color/blue"-->
+                <!--                    app:wave_visible_progress="0"-->
+                <!--                    app:wave_width="5dp" />-->
+
+
+<!--                <androidx.appcompat.widget.AppCompatImageView-->
+<!--                    android:id="@+id/dummyAppCompatImageView"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:scaleType="centerInside"-->
+<!--                    android:src="@drawable/waves" />-->
+
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/timeAppCompatTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/inter_regular"
+                android:gravity="center"
+                android:padding="@dimen/_4sdp"
+                android:text="0.00"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9ssp"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="-10dp">
+
+            <LinearLayout
+                android:id="@+id/likeLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical|end"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:visibility="gone"
+                android:backgroundTint="@color/grey_light"
+                android:background="@drawable/rounded_like_bg">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_thumbs_up" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/likeCountAppCompatTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/white"
+                    android:text="1"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_2sdp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loveLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_gravity="center_vertical|end"
+                android:paddingVertical="@dimen/_2sdp"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:visibility="gone"
+                android:backgroundTint="@color/grey_light"
+                android:background="@drawable/rounded_like_bg">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:src="@drawable/ic_like_heart" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/loveCountAppCompatTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/white"
+                    android:text="1"
+                    android:layout_marginStart="@dimen/_2sdp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/laughingLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_gravity="center_vertical|end"
+                android:paddingVertical="@dimen/_2sdp"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:visibility="gone"
+                android:backgroundTint="@color/grey_light"
+                android:background="@drawable/rounded_like_bg">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:src="@drawable/ic_laughing" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/laughingCountAppCompatTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/white"
+                    android:text="1"
+                    android:layout_marginStart="@dimen/_2sdp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/expressionLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_gravity="center_vertical|end"
+                android:paddingVertical="@dimen/_2sdp"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:visibility="gone"
+                android:backgroundTint="@color/grey_light"
+                android:background="@drawable/rounded_like_bg">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:src="@drawable/ic_shock_emoji" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/expressionCountAppCompatTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/white"
+                    android:text="1"
+                    android:layout_marginStart="@dimen/_2sdp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sadLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_gravity="center_vertical|end"
+                android:paddingVertical="@dimen/_2sdp"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:visibility="gone"
+                android:backgroundTint="@color/grey_light"
+                android:background="@drawable/rounded_like_bg">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:src="@drawable/ic_sad_emoji" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/sadCountAppCompatTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/white"
+                    android:text="1"
+                    android:layout_marginStart="@dimen/_2sdp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/prayLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_gravity="center_vertical|end"
+                android:paddingVertical="@dimen/_2sdp"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:visibility="gone"
+                android:backgroundTint="@color/grey_light"
+                android:background="@drawable/rounded_like_bg">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:src="@drawable/ic_hive_five" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/prayCountAppCompatTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/white"
+                    android:text="1"
+                    android:layout_marginStart="@dimen/_2sdp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/timeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white_50_opacity"
+                android:textSize="@dimen/_9ssp"
+                tools:text="1:00 PM" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivReadStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:src="@drawable/ic_chat_single_tick" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorFullTransparent"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="@dimen/zero_dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/black_bottom_sheet_background"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_4sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSeeAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingEnd="@dimen/_12sdp"
+            android:paddingBottom="@dimen/_2sdp"
+            android:text="@string/label_see_all"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/llVenueInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivVenueImage"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:foreground="@drawable/venue_image_overlay"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_place_holder_post"
+                    app:riv_corner_radius="@dimen/_6sdp"
+                    app:riv_oval="false" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivVenueCategoryImage"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_place_holder_post"
+                    app:riv_border_color="@color/color08163C"
+                    app:riv_border_width="@dimen/_2sdp"
+                    app:riv_oval="true" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvVenueCategoryName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/nunito_sans_semi_bold"
+                    android:maxLines="1"
+                    android:textColor="@color/md_white"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    tools:text="The Love Shack" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:ellipsize="end"
+                    android:lines="2"
+                    android:maxLines="2"
+                    android:textColor="@color/white_50_opacity"
+                    android:textSize="@dimen/_9ssp"
+                    tools:text="Lorem Ipsum is simply dm Ipsum is simply dimply dummy text" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:gravity="center_vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDistance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:layout_toStartOf="@+id/ivDirection"
+                        android:gravity="center_vertical|end"
+                        android:maxLines="1"
+                        android:textColor="@color/md_white"
+                        android:textSize="@dimen/_9ssp"
+                        tools:text="1 mile" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivDirection"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:src="@drawable/ic_map_direction" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

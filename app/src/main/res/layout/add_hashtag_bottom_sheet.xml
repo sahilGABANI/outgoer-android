@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/login_bottom_sheet_background"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="@dimen/zero_dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etHashtag"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@drawable/new_edittext_background"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:hint="@string/label_enter_hashtag"
+            android:padding="@dimen/_8sdp"
+            android:textColorHint="@color/grey_light"
+            android:textColor="@color/white"
+            android:fontFamily="@font/inter_regular"
+            android:textSize="@dimen/_12ssp"
+            android:layout_gravity="center_vertical"
+            android:inputType="textCapSentences"
+            android:imeOptions="actionSend"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAdd"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/label_Add"
+            android:textAllCaps="false"
+            android:fontFamily="@font/inter_medium"
+            android:backgroundTint="@color/grey_dark"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/_6sdp"
+            android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAddedHashtag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        tools:listitem="@layout/new_reels_hashtag_view"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_8sdp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_submit"
+        android:textAllCaps="false"
+        android:fontFamily="@font/inter_medium"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/white"
+        app:cornerRadius="@dimen/_6sdp"
+        android:backgroundTint="@color/purple"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:minHeight="@dimen/_42sdp"/>
+
+
+
+</LinearLayout>

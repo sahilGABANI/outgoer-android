@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_16sdp"
+    android:background="@drawable/login_bottom_sheet_background"
+    android:backgroundTint="@color/black_transparent_84"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_2sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="@drawable/bg_grey_border"
+        android:backgroundTint="@color/grey_light"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/savedAccountRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_below="@+id/view"/>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_24sdp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+
+    <LinearLayout
+        android:id="@+id/addOutgoerAccountLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/savedAccountRecyclerView">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_add_24"
+            android:padding="@dimen/_6sdp"
+            android:background="@drawable/rounded_background"
+            app:riv_corner_radius="@dimen/_22sdp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/shareAppCompatTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingStart="@dimen/_8sdp"
+            android:fontFamily="@font/inter_medium"
+            android:text="@string/add_outgoer_account"
+            android:textColor="@color/md_white"
+            android:textSize="@dimen/_14ssp" />
+
+    </LinearLayout>
+</RelativeLayout>

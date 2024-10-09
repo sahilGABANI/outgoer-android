@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/login_bottom_sheet_background"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="@dimen/_100sdp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <LinearLayout
+        android:id="@+id/llLoginContainer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_280sdp"
+        android:paddingVertical="@dimen/_12sdp"
+        android:background="@drawable/login_bottom_sheet_background"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_2sdp"
+            android:background="@color/grey_light"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:id="@+id/viewersLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:padding="@dimen/_12sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_visible_eye" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/totalViewsAppCompatTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:fontFamily="@font/inter_regular"
+                android:lines="1"
+                android:textColor="@color/md_white"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold"
+                tools:text="Rossi Alessandro" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/userRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <LinearLayout
+            android:id="@+id/llEmptyState"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEmpty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/inter_regular"
+                android:gravity="center"
+                android:lines="1"
+                android:textColor="@color/md_white"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold"
+                android:text="@string/no_story_view" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

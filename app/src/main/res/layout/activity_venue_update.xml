@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/toolbarLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backAppCompatImageView"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_new_back_arrow_icon" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:fontFamily="@font/inter_semi_bold"
+            android:text="@string/label_update_venue_info"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:orientation="vertical">
+
+
+            <FrameLayout
+                android:id="@+id/flProfileImage"
+                android:layout_width="@dimen/_86sdp"
+                android:layout_height="@dimen/_86sdp"
+                android:visibility="visible"
+                android:layout_gravity="center_horizontal">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivMyProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="@dimen/_12sdp"
+                    android:layout_margin="@dimen/_6sdp"
+                    android:background="@drawable/new_edittext_background"
+                    android:src="@drawable/venue_placeholder"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_gravity="bottom|end"
+                    android:src="@drawable/ic_profile_edit_camera" />
+
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/inter_regular"
+                android:text="@string/label_v_name"
+                android:textColor="@color/md_white"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/nameAppCompatEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/new_edittext_background"
+                android:hint="@string/label_v_add_name"
+                android:imeOptions="actionNext"
+                android:inputType="textCapSentences"
+                android:letterSpacing="0.025"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:paddingHorizontal="@dimen/_16sdp"
+                android:paddingVertical="@dimen/_12sdp"
+                android:textColor="@color/md_white"
+                android:textColorHint="@color/grey_light"
+                android:textSize="@dimen/_12ssp" />
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:fontFamily="@font/inter_regular"
+                android:text="@string/label_v_phone_no"
+                android:textColor="@color/md_white"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_4sdp">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:ccp_autoDetectCountry="true"
+                    app:ccp_textSize="@dimen/_12ssp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/new_edittext_background"
+                    app:ccp_contentColor="@color/md_white"
+                    android:paddingVertical="@dimen/_5sdp"
+                    app:ccp_showNameCode="false"/>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/phoneNoAppCompatEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/new_edittext_background"
+                    android:layout_toEndOf="@id/ccp"
+                    android:hint="@string/label_v_add_phone_no"
+                    android:imeOptions="actionNext"
+                    android:layout_centerVertical="true"
+                    android:inputType="phone"
+                    android:letterSpacing="0.025"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:paddingHorizontal="@dimen/_16sdp"
+                    android:paddingVertical="@dimen/_12sdp"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:textColor="@color/md_white"
+                    android:textColorHint="@color/grey_light"
+                    android:textSize="@dimen/_12ssp" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:fontFamily="@font/inter_regular"
+                android:text="@string/label_email"
+                android:textColor="@color/md_white"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/emailAppCompatEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/new_edittext_background"
+                android:backgroundTint="@color/grey_action"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:letterSpacing="0.025"
+                android:enabled="false"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:paddingHorizontal="@dimen/_16sdp"
+                android:paddingVertical="@dimen/_12sdp"
+                android:textColor="@color/md_white"
+                android:textColorHint="@color/grey_light"
+                android:textSize="@dimen/_12ssp" />
+
+            <RelativeLayout
+                android:id="@+id/rlHashTags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivHashTag"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_4sdp"
+                    android:src="@drawable/ic_new_reel_info_hashtag" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvHashtag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/ivHashtagNext"
+                    android:layout_toEndOf="@id/ivHashTag"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/inter_regular"
+                    android:hint="@string/label_add_hashtags"
+                    android:maxLines="1"
+                    android:padding="@dimen/_6sdp"
+                    android:textColor="@color/md_white"
+                    android:textColorHint="@color/md_white"
+                    android:textSize="@dimen/_12ssp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivHashtagNext"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/ic_new_forward_grey_icon"
+                    android:tint="@color/white" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:fontFamily="@font/inter_regular"
+                android:text="@string/label_description"
+                android:textColor="@color/md_white"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/descriptionAppCompatEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/groupInfoLinearLayout"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/new_edittext_background"
+                android:gravity="top"
+                android:hint="@string/label_write_a_description"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine|textCapSentences"
+                android:letterSpacing="0.025"
+                android:lines="3"
+                android:maxLength="500"
+                android:maxLines="3"
+                android:padding="@dimen/_12sdp"
+                android:textColor="@color/md_white"
+                android:textColorHint="@color/grey_light"
+                android:textSize="@dimen/_12ssp" />
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/continueFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/continueMaterialButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:backgroundTint="@color/purple"
+            android:fontFamily="@font/inter_semi_bold"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/label_save"
+            android:textAllCaps="false"
+            android:textColor="@color/md_white"
+            android:textSize="@dimen/_12ssp"
+            app:cornerRadius="@dimen/_6sdp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+</LinearLayout>

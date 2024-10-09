@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorFullTransparent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorFullTransparent"
+        app:cardElevation="@dimen/zero_dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/userContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/_4sdp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivUserProfile"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_place_holder_post_like_user"
+                app:riv_corner_radius="@dimen/_8sdp"
+                app:riv_oval="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/ivUserProfile"
+                android:layout_toStartOf="@id/llButton"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_sans_bold"
+                    android:maxLines="1"
+                    android:textColor="@color/md_white"
+                    android:textSize="@dimen/_13ssp"
+                    tools:text="@string/baby_base" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivVerified"
+                        android:layout_width="@dimen/_11sdp"
+                        android:layout_height="@dimen/_11sdp"
+                        android:src="@drawable/ic_user_verificatied_badge"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_gravity="center_vertical"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/half_dp"/>
+
+                </LinearLayout>
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:alpha="0.8"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/nunito_sans_light"
+                    android:maxLines="1"
+                    android:textColor="@color/md_white"
+                    android:textSize="@dimen/_12ssp"
+                    tools:text="@string/lorem_ipsum_is_simply_dummy_text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFollow"
+                    android:layout_width="@dimen/_75sdp"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:paddingHorizontal="@dimen/_6sdp"
+                    android:textAllCaps="false"
+                    app:cornerRadius="@dimen/_8sdp"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="@string/label_follow"
+                    android:backgroundTint="@color/purple"
+                    android:textColor="@color/md_white"
+                    />
+
+<!--
+        <item name="android:minHeight">@dimen/zero_dp</item>
+        <item name="android:insetTop">@dimen/zero_dp</item>
+        <item name="android:insetBottom">@dimen/zero_dp</item>
+        <item name="android:minEms">4</item>
+        <item name="android:padding">@dimen/_6sdp</item>
+        <item name="android:textSize">@dimen/_9ssp</item>
+        <item name="cornerRadius">@dimen/_5sdp</item>-->
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFollowing"
+                    android:layout_width="@dimen/_75sdp"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:paddingHorizontal="@dimen/_6sdp"
+                    android:textAllCaps="false"
+                    app:cornerRadius="@dimen/_8sdp"
+                    android:textSize="@dimen/_11ssp"
+                    android:text="@string/label_following"
+                    android:fontFamily="@font/inter_regular"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

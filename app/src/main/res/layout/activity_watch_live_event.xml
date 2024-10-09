@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_action"
+    android:keepScreenOn="true"
+    tools:context=".ui.watchliveevent.WatchLiveEventActivity">
+
+    <FrameLayout
+        android:id="@+id/coHostFirstVideo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/coHostSecondVideo"
+        app:layout_constraintEnd_toStartOf="@+id/coHostThirdVideo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <FrameLayout
+        android:id="@+id/coHostThirdVideo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/coHostSecondVideo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/coHostFirstVideo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <FrameLayout
+        android:id="@+id/coHostSecondVideo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/coHostFourVideo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coHostFirstVideo"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <FrameLayout
+        android:id="@+id/coHostFourVideo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/coHostSecondVideo"
+        app:layout_constraintTop_toBottomOf="@+id/coHostFirstVideo"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/exitAppCompatImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_12sdp"
+            android:src="@drawable/ic_back_arrow" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_toStartOf="@+id/coHostAppCompatImageView"
+            android:layout_toEndOf="@+id/exitAppCompatImageView"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/userProfileImageView"
+                    android:layout_width="@dimen/_38sdp"
+                    android:layout_height="@dimen/_38sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_chat_user_placeholder"
+                    app:riv_border_color="@color/color08163C"
+                    app:riv_border_width="@dimen/_1sdp"
+                    app:riv_corner_radius="@dimen/_6sdp"
+                    app:riv_oval="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/userNameTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_1sdp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/nunito_sans_bold"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:textColor="@color/md_white"
+                            android:textSize="@dimen/_13ssp"
+                            tools:text="Baby Base" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivVerified"
+                            android:layout_width="@dimen/_10sdp"
+                            android:layout_height="@dimen/_10sdp"
+                            android:src="@drawable/ic_user_verificatied_badge"
+                            android:layout_marginStart="@dimen/_3sdp"
+                            android:layout_gravity="center_vertical"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/half_dp"/>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/userFollowersTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:fontFamily="@font/nunito_sans_semi_bold"
+                        android:textColor="@color/md_white"
+                        android:textSize="@dimen/_10ssp"
+                        tools:text="286k Followers" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/liveButtonView"
+                        style="@style/ButtonSmall"
+                        android:fontFamily="@font/nunito_sans_extra_bold"
+                        android:minWidth="@dimen/_56sdp"
+                        android:minHeight="48dp"
+                        android:padding="@dimen/_4sdp"
+                        android:text="@string/label_live"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/_9ssp"
+                        app:cornerRadius="@dimen/_12sdp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/timerTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:fontFamily="@font/nunito_sans_semi_bold"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10ssp"
+                        tools:text="00:00" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tagTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_live_stream_watching_eye"
+                    android:drawablePadding="@dimen/_6sdp"
+                    android:fontFamily="@font/nunito_sans_semi_bold"
+                    android:gravity="center_vertical|end"
+                    android:paddingStart="@dimen/_12sdp"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingEnd="@dimen/_12sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:text="@string/watching_count_default"
+                    android:textColor="@color/md_white"
+                    android:textSize="@dimen/_10ssp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/coHostAppCompatImageView"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:padding="@dimen/_6sdp"
+            android:src="@drawable/ic_live_share"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_160sdp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/commentRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/view_live_event_comment" />
+
+            <com.petersamokhin.android.floatinghearts.HeartsView
+                android:id="@+id/heartsView"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                app:floating_time_coeff="0.8"
+                app:size_coeff="1.6"
+                app:x_max="4"
+                tools:visibility="visible" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/live_stream_comment_background"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/likeImageView"
+                android:layout_width="@dimen/_38sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_heart_gred" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/commentEditTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorFullTransparent"
+                android:cursorVisible="true"
+                android:fontFamily="@font/nunito_sans_bold"
+                android:hint="@string/type_a_comment"
+                android:imeOptions="actionSend"
+                android:includeFontPadding="false"
+                android:inputType="textCapSentences"
+                android:padding="@dimen/_8sdp"
+                android:textColor="@color/md_white"
+                android:textColorHint="@color/white_50_opacity"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/_12ssp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/sendImageView"
+                android:layout_width="@dimen/_36sdp"
+                android:layout_height="@dimen/_36sdp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_live_stream_send_message" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/liveEventTitleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/cameraFlipAppCompatImageView"
+                android:fontFamily="@font/nunito_sans_regular"
+                android:textColor="@color/md_white"
+                android:textSize="@dimen/_12ssp"
+                tools:text="#Outgoer" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cameraFlipAppCompatImageView"
+                android:layout_width="@dimen/_38sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_toStartOf="@+id/endLiveEventImageView"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/ic_live_stream_flip_camera"
+                android:tint="@color/md_white" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/endLiveEventImageView"
+                android:layout_width="@dimen/_38sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/ic_live_stream_stop_shoot" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

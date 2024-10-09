@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="@dimen/_12sdp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp"
+        android:src="@drawable/ic_profile_back" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/accountAppCompatTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_medium"
+        android:paddingHorizontal="@dimen/_4sdp"
+        android:text="@string/save_your_login_info"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_22ssp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_regular"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingHorizontal="@dimen/_4sdp"
+        android:text="@string/save_your_login_info_message"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveMaterialButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/purple"
+        android:fontFamily="@font/inter_semi_bold"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:text="@string/label_save"
+        android:textColor="@color/md_white"
+        android:textSize="@dimen/_12ssp"
+        app:cornerRadius="@dimen/_6sdp" />
+
+
+    <com.google.android.material.button.MaterialButton
+        style="?attr/materialButtonOutlinedStyle"
+        android:id="@+id/notNowMaterialButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_semi_bold"
+        android:padding="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="@string/label_not_now"
+        app:strokeColor="@color/grey"
+        android:layout_marginHorizontal="@dimen/_4sdp"
+        android:textColor="@color/md_white"
+        android:textSize="@dimen/_12ssp"
+        app:cornerRadius="@dimen/_6sdp" />
+
+</LinearLayout>

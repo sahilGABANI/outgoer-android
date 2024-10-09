@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.outgoer.mediapicker.custom.SquareImageView
+        android:id="@+id/ivVideoThumb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvVideoDuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ivVideoThumb"
+        android:background="@color/colorHalfTransparent"
+        android:gravity="center"
+        android:paddingTop="@dimen/_2sdp"
+        android:paddingBottom="@dimen/_2sdp"
+        android:textColor="@color/md_white"
+        android:textSize="@dimen/_11sdp"
+        android:textStyle="bold"
+        tools:text="10:20" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:background="@color/colorHalfTransparent"
+        android:padding="@dimen/_6sdp"
+        android:src="@drawable/outline_check_box_24"
+        android:tint="@color/colorPrimaryDark" />
+
+</RelativeLayout>

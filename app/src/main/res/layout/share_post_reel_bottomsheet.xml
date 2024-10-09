@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/itemView"
+        android:layout_width="@dimen/_32sdp"
+        android:layout_height="@dimen/_2sdp"
+        android:background="@drawable/bottom_sheet_top_handle"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/closeAppCompatImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close"
+        android:layout_margin="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"/>
+
+    <LinearLayout
+        android:id="@+id/llSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/closeAppCompatImageView"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:background="@drawable/new_edittext_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/_4sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_chat_search" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_weight="1"
+            android:background="@color/colorFullTransparent"
+            android:gravity="center_vertical"
+            android:hint="@string/label_search"
+            android:imeOptions="actionSearch"
+            android:inputType="textCapSentences"
+            android:lines="1"
+            android:maxLength="80"
+            android:maxLines="1"
+            android:textColor="@color/md_white"
+            android:textColorHint="@color/md_white"
+            android:textSize="@dimen/_12sdp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivClear"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:padding="@dimen/_6sdp"
+            android:src="@drawable/ic_close_24"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/userInfoRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llSearch"
+        android:layout_centerHorizontal="true"
+        android:paddingHorizontal="@dimen/_8sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_above="@+id/actionView"
+        android:orientation="vertical" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/noPeopleAppCompatTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:fontFamily="@font/inter_regular"
+        android:text="@string/label_no_people_found"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/md_white"
+        android:textStyle="bold"
+        android:layout_below="@+id/llSearch"
+        android:gravity="center"
+        android:layout_above="@+id/actionView"
+        android:textSize="@dimen/_12ssp"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/actionView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/grey_dark"
+        android:layout_above="@+id/actionFrameLayout"/>
+
+    <FrameLayout
+        android:id="@+id/actionFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/actionLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/addToStoryRelativeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="@dimen/_8sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/addToStoryAppCompatImageView"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:src="@drawable/add_to_story"
+                    android:padding="@dimen/_8sdp"
+                    android:layout_centerHorizontal="true"
+                    android:backgroundTint="@color/white_40_opacity"
+                    android:background="@drawable/grey_rounded_background"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="@string/add_to_story"
+                    android:textColor="@color/md_white"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/addToStoryAppCompatImageView"
+                    android:textSize="@dimen/_8ssp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/shareRelativeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="@dimen/_8sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/shareAppCompatImageView"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:src="@drawable/ic_live_share"
+                    android:padding="@dimen/_8sdp"
+                    android:layout_centerHorizontal="true"
+                    android:backgroundTint="@color/white_40_opacity"
+                    android:background="@drawable/grey_rounded_background"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/shareAppCompatTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="@string/share_to_other"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/md_white"
+                    android:layout_below="@+id/shareAppCompatImageView"
+                    android:textSize="@dimen/_8ssp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/copyLinkRelativeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_12sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/copyLinkAppCompatImageView"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/grey_rounded_background"
+                    android:backgroundTint="@color/white_40_opacity"
+                    android:padding="@dimen/_8sdp"
+                    android:rotation="135"
+                    android:src="@drawable/copy_link" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/copyLinkAppCompatTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/copyLinkAppCompatImageView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="@string/copy_link"
+                    android:textColor="@color/md_white"
+                    android:textSize="@dimen/_8ssp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/whatsAppRelativeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_8sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/whatsAppAppCompatImageView"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:src="@drawable/whatsapp"
+                    android:padding="@dimen/_8sdp"
+                    android:layout_centerHorizontal="true"
+                    android:backgroundTint="@color/white_40_opacity"
+                    android:background="@drawable/grey_rounded_background"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/whatsAppAppCompatTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="@string/whatsapp"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/md_white"
+                    android:layout_below="@+id/whatsAppAppCompatImageView"
+                    android:textSize="@dimen/_8ssp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/messageRelativeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_marginHorizontal="@dimen/_8sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/messageAppCompatImageView"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:src="@drawable/ic_new_home_message"
+                    android:padding="@dimen/_8sdp"
+                    android:layout_centerHorizontal="true"
+                    android:backgroundTint="@color/white_40_opacity"
+                    android:background="@drawable/grey_rounded_background"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/messageAppCompatTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="@string/messages"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/md_white"
+                    android:layout_below="@+id/messageAppCompatImageView"
+                    android:textSize="@dimen/_8ssp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/sendsAppCompatTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:background="@drawable/bg_grey_border"
+            android:backgroundTint="@color/purple"
+            android:fontFamily="@font/inter_semi_bold"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/send"
+            android:visibility="gone"
+            android:textColor="@color/white" />
+
+    </FrameLayout>
+
+</RelativeLayout>

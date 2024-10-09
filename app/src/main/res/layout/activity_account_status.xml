@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:padding="@dimen/_7sdp"
+            android:src="@drawable/ic_new_back_arrow_icon" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/inter_semi_bold"
+            android:gravity="center_horizontal"
+            android:text="@string/account_status"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp" />
+
+    </RelativeLayout>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivMyProfile"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_chat_user_placeholder"
+        app:riv_border_color="@color/purple"
+        app:riv_border_width="@dimen/_1sdp"
+        app:riv_corner_radius="@dimen/_50sdp"
+        app:riv_oval="true"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/rlHeader"/>
+
+    <LinearLayout
+        android:id="@+id/profileLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginHorizontal="@dimen/_18sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ivMyProfile"
+        android:layout_marginTop="@dimen/_8sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/inter_semi_bold"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"
+            tools:text="Naughty Miss"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:includeFontPadding="false"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivVerified"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:src="@drawable/ic_user_verificatied_badge"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/half_dp"/>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/messageAppCompatTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/profileLinearLayout"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/inter_regular"
+        android:text="@string/account_status_message"
+        android:textColor="@color/grey_light"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginHorizontal="@dimen/_32sdp"
+        android:textSize="@dimen/_11ssp" />
+
+    <RelativeLayout
+        android:id="@+id/deactivateAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/messageAppCompatTextView"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:paddingTop="@dimen/_16sdp"
+        android:paddingBottom="@dimen/_6sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/deactivateAppCompatImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_deactivate"
+            android:rotation="45"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_toEndOf="@+id/deactivateAppCompatImageView"
+            android:fontFamily="@font/inter_regular"
+            android:text="@string/label_deactivate_profile"
+            android:textColor="@color/white"
+            android:includeFontPadding="true"
+            android:textSize="@dimen/_14ssp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/ic_new_forward_grey_icon" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

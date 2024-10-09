@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorFullTransparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/toolbarLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backAppCompatImageView"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_new_back_arrow_icon" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:fontFamily="@font/inter_semi_bold"
+            android:text="@string/label_sponty"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp" />
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/new_login_edittext_background"
+        app:cardBackgroundColor="@color/grey_action"
+        app:cardCornerRadius="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/rlMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:paddingVertical="@dimen/_4sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <!--            <com.makeramen.roundedimageview.RoundedI_profile_with_bg" />mageView-->
+            <!--                android:id="@+id/ivProfile"-->
+            <!--                android:layout_width="@dimen/_38sdp"-->
+            <!--                android:layout_height="@dimen/_38sdp"-->
+            <!--                android:layout_alignParentTop="true"-->
+            <!--                android:scaleType="centerCrop"-->
+            <!--                app:riv_oval="true"-->
+            <!--                tools:src="@drawable/ic_place_holder-->
+
+            <FrameLayout
+                android:id="@+id/profileFrameLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:background="@drawable/ring_gredient_color"
+                    android:padding="@dimen/_1sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_place_holder_post"
+                    app:riv_border_width="@dimen/zero_dp"
+                    app:riv_corner_radius="@dimen/_26sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/liveProfileAppCompatTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:background="@drawable/ring_gredient_color"
+                    android:fontFamily="@font/inter_semi_bold"
+                    android:paddingHorizontal="@dimen/_4sdp"
+                    android:paddingVertical="@dimen/_2sdp"
+                    android:text="@string/live"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8ssp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_toEndOf="@+id/profileFrameLayout"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/usernameAppCompatTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/inter_medium"
+                        android:textColor="@color/md_white"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold"
+                        tools:text="Username" />
+
+                    <!--                    <androidx.appcompat.widget.AppCompatImageView-->
+                    <!--                        android:id="@+id/ivLike"-->
+                    <!--                        android:layout_width="@dimen/_24sdp"-->
+                    <!--                        android:layout_height="@dimen/_24sdp"-->
+                    <!--                        android:layout_marginEnd="@dimen/_4sdp"-->
+                    <!--                        android:padding="@dimen/_4sdp"-->
+                    <!--                        android:src="@drawable/ic_white_like" />-->
+                </LinearLayout>
+
+                <com.outgoer.base.view.socialview.widget.SocialTextView
+                    android:id="@+id/aboutAppCompatTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/md_white"
+                    android:textSize="@dimen/_10ssp"
+                    app:mentionColor="@color/purple"
+                    app:socialFlags="mention"
+                    tools:text="arh ri hs shto sthsts sit oishtsih sith soith shtsht hsts ihtsoiht oisht h;" />
+
+
+                <!--                                <androidx.appcompat.widget.AppCompatTextView-->
+                <!--                                    android:id="@+id/aboutAppCompatTextView"-->
+                <!--                                    android:layout_width="match_parent"-->
+                <!--                                    android:layout_height="wrap_content"-->
+                <!--                                    android:fontFamily="@font/inter_regular"-->
+                <!--                                    android:paddingVertical="@dimen/_2sdp"-->
+                <!--                                    android:textColor="@color/md_white"-->
+                <!--                                    android:textSize="@dimen/_10sdp"-->
+                <!--                                    tools:text="hey guys im going to the gym at 6pm if anyone wants to join me" />-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/timeAppCompatTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/joinFrameLayout"
+                        android:fontFamily="@font/inter_light"
+                        android:paddingTop="@dimen/_4sdp"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:textColor="@color/md_white"
+                        android:textSize="@dimen/_9sdp"
+                        tools:text="Friday 10:30 PM - 03:30 AM " />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/locationAppCompatTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/timeAppCompatTextView"
+                        android:layout_toStartOf="@+id/joinFrameLayout"
+                        android:fontFamily="@font/inter_regular"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:textColor="@color/md_white"
+                        android:textSize="@dimen/_9sdp"
+                        tools:text="Noble Park, Victoria" />
+
+                    <FrameLayout
+                        android:id="@+id/joinFrameLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true">
+
+                        <LinearLayout
+                            android:id="@+id/checkJoinMaterialButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:id="@+id/firstRoundedImageView"
+                                android:layout_width="@dimen/_32sdp"
+                                android:layout_height="@dimen/_32sdp"
+                                android:background="@drawable/grey_semi_transparent"
+                                android:src="@drawable/ic_add"
+                                app:riv_corner_radius="@dimen/_16sdp" />
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:id="@+id/secondRoundedImageView"
+                                android:layout_width="@dimen/_32sdp"
+                                android:layout_height="@dimen/_32sdp"
+                                android:layout_marginStart="-12dp"
+                                android:background="@drawable/grey_semi_transparent"
+                                android:src="@drawable/ic_add"
+                                app:riv_corner_radius="@dimen/_16sdp" />
+
+                            <FrameLayout
+                                android:id="@+id/moreFrameLayout"
+                                android:layout_width="@dimen/_32sdp"
+                                android:layout_height="@dimen/_32sdp"
+                                android:layout_marginStart="-12dp">
+
+                                <com.makeramen.roundedimageview.RoundedImageView
+                                    android:id="@+id/thirdRoundedImageView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/grey_semi_transparent"
+                                    android:src="@drawable/ic_add"
+                                    app:riv_corner_radius="@dimen/_16sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/maxRoundedImageView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/grey_semi_transparent"
+                                    android:fontFamily="@font/inter_regular"
+                                    android:paddingVertical="@dimen/_2sdp"
+                                    android:textColor="@color/md_white"
+                                    android:textSize="@dimen/_10sdp" />
+
+                            </FrameLayout>
+
+
+                        </LinearLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/joinMaterialButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/grey_medium"
+                            android:fontFamily="@font/inter_regular"
+                            android:padding="@dimen/_4sdp"
+                            android:text="@string/label_join"
+                            android:textAllCaps="false"
+                            android:textColor="@color/md_white"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                            app:cornerRadius="@dimen/_6sdp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/unjoinMaterialButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/grey_medium"
+                            android:fontFamily="@font/inter_regular"
+                            android:padding="@dimen/_4sdp"
+                            android:text="@string/label_unjoin"
+                            android:textAllCaps="false"
+                            android:textColor="@color/md_white"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                            app:cornerRadius="@dimen/_6sdp" />
+
+                    </FrameLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/likecommentLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:gravity="end|center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/cvVenueTaggedContainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|start"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_2sdp">
+
+                        <FrameLayout
+                            android:id="@+id/placeVenueFrameLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_2sdp"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_5sdp">
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:id="@+id/profileVenueAppCompatImageView"
+                                android:layout_width="@dimen/_24sdp"
+                                android:layout_height="@dimen/_24sdp"
+                                android:layout_marginBottom="@dimen/_4sdp"
+                                android:background="@drawable/ring_gredient_color"
+                                android:padding="@dimen/_1sdp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_place_holder_post"
+                                app:riv_border_width="@dimen/zero_dp"
+                                app:riv_corner_radius="@dimen/_26sdp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/liveAppCompatTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal|bottom"
+                                android:background="@drawable/ring_gredient_color"
+                                android:fontFamily="@font/inter_semi_bold"
+                                android:paddingHorizontal="@dimen/_2sdp"
+                                android:paddingVertical="@dimen/_1sdp"
+                                android:text="@string/live"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_5ssp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                        </FrameLayout>
+
+                        <!--                        <com.makeramen.roundedimageview.RoundedImageView-->
+                        <!--                            android:id="@+id/profileVenueAppCompatImageView"-->
+                        <!--                            android:layout_width="@dimen/_24sdp"-->
+                        <!--                            android:layout_height="@dimen/_24sdp"-->
+                        <!--                            android:padding="@dimen/_3sdp"-->
+                        <!--                            app:radius="@dimen/_14sdp"-->
+                        <!--                            app:riv_corner_radius="@dimen/_26sdp"-->
+                        <!--                            android:src="@drawable/ic_logo" />-->
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/venueTaggedAppCompatTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            android:layout_marginEnd="@dimen/_3sdp"
+                            android:fontFamily="@font/inter_regular"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10ssp"
+                            tools:text="# hashtag" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/commentLinearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivComment"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:padding="@dimen/_2sdp"
+                            android:src="@drawable/ic_home_comment" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvCommentCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_regular"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/likeLinearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/likeAppCompatImageView"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_gravity="center_vertical"
+                            android:padding="@dimen/_2sdp"
+                            android:src="@drawable/ic_post_like" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvLikeCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_regular"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

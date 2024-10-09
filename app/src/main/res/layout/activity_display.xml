@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.chat.DisplayActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:src="@drawable/ic_place_holder_post"
+        tools:visibility="visible" />
+
+    <com.outgoer.videoplayer.JzvdStdOutgoer
+        android:id="@+id/outgoerVideoPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_12sdp"
+        android:src="@drawable/ic_close_vector" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivMutePlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/_12sdp"
+        android:padding="@dimen/_4sdp"
+        android:src="@drawable/ic_post_mute" />
+
+</RelativeLayout>

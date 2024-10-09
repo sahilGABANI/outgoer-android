@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/venueRelativeLayout"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_160sdp"
+        android:orientation="vertical"
+        android:background="@drawable/grey_border_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/_4sdp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/venueMediaRoundedImageView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120sdp"
+            app:riv_corner_radius_top_left="@dimen/_8sdp"
+            app:riv_corner_radius_top_right="@dimen/_8sdp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:paddingHorizontal="@dimen/_1sdp"
+            android:paddingTop="@dimen/_1sdp"
+            android:src="@drawable/venue_placeholder"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/eventsAppCompatTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/inter_regular"
+            android:maxLines="1"
+            android:textColor="@color/md_white"
+            android:textSize="@dimen/_7ssp"
+            android:text="2X Events"
+            android:drawableStart="@drawable/ic_calendar"
+            android:drawablePadding="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_above="@+id/vibesAppCompatTextView"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/vibesAppCompatTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/inter_regular"
+            android:maxLines="1"
+            android:textColor="@color/md_white"
+            android:textSize="@dimen/_8ssp"
+            android:text="30 vibes today"
+            android:drawableStart="@drawable/ic_vibes"
+            android:drawablePadding="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_above="@+id/profileRoundedImageView"/>
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/profileRoundedImageView"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            app:riv_corner_radius="@dimen/_12sdp"
+            android:src="@drawable/venue_placeholder"
+            android:scaleType="centerCrop"
+            android:layout_below="@+id/venueMediaRoundedImageView"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginStart="@dimen/_6sdp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/venueNameAppCompatTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/inter_regular"
+            android:maxLines="1"
+            android:textColor="@color/md_white"
+            android:textSize="@dimen/_9ssp"
+            tools:text="Chaise Lounge"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_below="@+id/venueMediaRoundedImageView"
+            android:layout_toEndOf="@+id/profileRoundedImageView"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/venueRatingCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_regular"
+            android:text="@string/tvVenueRatingCount"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_7ssp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_toEndOf="@+id/profileRoundedImageView"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_below="@+id/venueNameAppCompatTextView"/>
+
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/venueRatingBar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:progressTint="@color/blue"
+            android:theme="@style/RatingBar"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_below="@+id/venueNameAppCompatTextView"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

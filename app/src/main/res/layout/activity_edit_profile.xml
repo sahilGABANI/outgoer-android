@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlFooter"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlHeader"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/inter_semi_bold"
+                android:gravity="center"
+                android:text="@string/label_edit_profile"
+                android:textColor="@color/md_white"
+                android:textSize="@dimen/_16ssp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingEnd="@dimen/_12sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:src="@drawable/ic_profile_back" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_150sdp">
+
+                <FrameLayout
+                    android:id="@+id/flProfileImage"
+                    android:layout_width="@dimen/_86sdp"
+                    android:layout_height="@dimen/_86sdp"
+                    android:layout_gravity="center_horizontal">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/ivMyProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        app:riv_oval="true"
+                        tools:src="@drawable/ic_place_holder_add_event" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_28sdp"
+                        android:layout_height="@dimen/_28sdp"
+                        android:layout_gravity="bottom|end"
+                        android:src="@drawable/ic_profile_edit_camera" />
+
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_18sdp"
+                    android:background="@drawable/new_edittext_background"
+                    android:hint="@string/label_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    android:letterSpacing="0.025"
+                    android:maxLength="40"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:textColor="@color/md_white"
+                    android:textColorHint="@color/grey_light"
+                    android:textSize="@dimen/_12ssp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_18sdp"
+                    android:background="@drawable/new_edittext_background">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/llUsernameValidation"
+                        android:background="@drawable/btn_rounded_corner_username_field"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890_"
+                        android:hint="@string/label_username"
+                        android:imeOptions="actionNext"
+                        android:includeFontPadding="false"
+                        android:inputType="textCapSentences"
+                        android:letterSpacing="0.025"
+                        android:maxLength="24"
+                        android:paddingStart="@dimen/_16sdp"
+                        android:paddingTop="@dimen/_12sdp"
+                        android:paddingEnd="@dimen/_16sdp"
+                        android:paddingBottom="@dimen/_12sdp"
+                        android:textColor="@color/md_white"
+                        android:textColorHint="@color/grey_light"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <LinearLayout
+                        android:id="@+id/llUsernameValidation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ProgressBar
+                            android:id="@+id/progressBarUsername"
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:visibility="gone"
+                            tools:visibility="visible" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivUsername"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:src="@drawable/ic_username_exist"
+                            android:visibility="gone"
+                            tools:visibility="visible" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <com.outgoer.base.view.socialview.widget.SocialEditText
+                    android:id="@+id/etAbout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_18sdp"
+                    android:background="@drawable/new_edittext_background"
+                    android:gravity="top"
+                    android:hint="@string/label_about"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:letterSpacing="0.025"
+                    android:lines="3"
+                    android:maxLength="150"
+                    android:maxLines="3"
+                    app:mentionColor="@color/purple"
+                    app:socialFlags="mention|hashtag"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:textColor="@color/md_white"
+                    android:textColorHint="@color/grey_light"
+                    android:textSize="@dimen/_12ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/addLinkAppCompatTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginHorizontal="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:background="@drawable/new_edittext_background"
+                    android:fontFamily="@font/inter_medium"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/label_add_link"
+                    android:textColor="@color/md_white"
+                    android:textSize="@dimen/_10ssp" />
+
+                <RelativeLayout
+                    android:id="@+id/linkRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/copyAppCompatImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:background="@drawable/bg_white_border"
+                        android:padding="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:src="@drawable/ic_attach" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/webTitleAppCompatTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_toStartOf="@+id/endAppCompatImageView"
+                        android:layout_toEndOf="@+id/copyAppCompatImageView"
+                        android:autoLink="web"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/inter_medium"
+                        android:maxLines="1"
+                        android:textColor="@color/md_white"
+                        android:textSize="@dimen/_14ssp"
+                        tools:text="@string/lorem_ipsum_is_simply_dummy_text" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/webLinkAppCompatTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/webTitleAppCompatTextView"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_toStartOf="@+id/endAppCompatImageView"
+                        android:layout_toEndOf="@+id/copyAppCompatImageView"
+                        android:fontFamily="@font/inter_regular"
+                        android:textColor="@color/grey_light"
+                        android:textSize="@dimen/_11ssp"
+                        tools:text="@string/lorem_ipsum_is_simply_dummy_text" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/endAppCompatImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:padding="@dimen/_10sdp"
+                        android:rotation="180"
+                        android:src="@drawable/ic_back_arrow" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rlFollowerList"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_160sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/_12ssp"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_12sdp"
+        android:visibility="gone"
+        tools:listitem="@layout/view_comment_tag_people"
+        tools:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/rlFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/purple"
+            android:fontFamily="@font/inter_medium"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/label_save"
+            android:textAllCaps="false"
+            android:textColor="@color/md_white"
+            android:textSize="@dimen/_12ssp"
+            app:cornerRadius="@dimen/_6sdp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:clickable="false"
+            android:visibility="invisible" />
+    </RelativeLayout>
+</RelativeLayout>

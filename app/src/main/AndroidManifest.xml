@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.outgoer">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+<!--    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />-->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <protected-broadcast android:name="android.intent.action.MEDIA_MOUNTED" />
+
+    <application
+        android:name=".application.Outgoer"
+        android:allowBackup="false"
+        android:extractNativeLibs="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="DataExtractionRules,UnusedAttribute"
+        tools:replace="android:label,allowBackup"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.nointernet.NoInternetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.savecredentials.SaveInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.block.BlockProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.save_post_reels.SavePostReelsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.profile.newprofile.setting.AccountStatusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.create_story.AddStoryLocationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.create_story.AddToStoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.create_story.CreateStoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.story.StoryInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.story.StoryViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.music.TrimMusicActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.add_location.AddLocationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.video_preview.VideoPreviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.add_hashtag.HashtagActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.music.AddMusicActivity"
+            android:exported="false" />
+
+        <uses-library
+            android:name="com.sec.android.app.multiwindow"
+            android:required="false" />
+
+        <activity
+            android:name=".ui.userverification.VerificationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.chat.NewChatConversationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.temp.TempActivity"
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".ui.fullscreenimage.FullScreenImageActivity" -->
+        <!-- android:exported="false" /> -->
+        <activity
+            android:name=".ui.deepar.DeeparEffectsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.event_list.EventListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.sponty.SpontyDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.vennue_list.VenueListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.tag_venue.VenueTaggedActivity"
+            android:exported="false" />
+
+        <receiver
+            android:name=".ui.map.GeofenceBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.example.myapp.ACTION_RECEIVE_GEOFENCE_EVENT" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ui.map.GeoMapsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.newvenuedetail.FullScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.venue.VenueCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.venue.update.VenueTimingUpdateActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.venue.update.VenueInfoUpdateActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.venue.update.VenueUpdateActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.editprofile.AddExternalLinkActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.venue.VenueMediaActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.venue.VenueAvailabilityActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.venue.VenueInfoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.venue.RegisterVenueActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.group.edit_profile.EditGroupActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.group.details.GroupDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.group.create.AddGroupActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.group.create.CreateGroupActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.search.SearchActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.createevent.AddMediaEventActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.createevent.CreateEventsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.sponty.CreateSpontyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.home.newReels.hashtag.PlayReelsByHashtagActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.create.CreateNewReelInfoActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".ui.home.newmap.venueevents.VenueEventDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.newvenuedetail.VenueReviewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.newvenuedetail.NewVenueDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.chat.CreateNewMessageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.chat.NewChatActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".ui.newnotification.NewNotificationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.newReels.hashtag.NewReelsHashtagActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.profile.newprofile.setting.NewProfileSettingCategoryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.profile.newprofile.setting.NewProfileSettingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.otherprofile.NewOtherUserProfileActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".ui.splash.NewSplashActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="true"
+            android:screenOrientation="nosensor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:host="open"
+                    android:scheme="post_id" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:host="open"
+                    android:scheme="reels_id" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+<!--            <intent-filter android:autoVerify="true">-->
+<!--                <data-->
+<!--                    android:host="outgoer.page.link"-->
+<!--                    android:scheme="https" />-->
+
+<!--                <action android:name="android.intent.action.VIEW" />-->
+
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--                <category android:name="android.intent.category.BROWSABLE" />-->
+<!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".ui.onboarding.OnBoardingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.chat.ChatSelectImageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.followdetail.FollowDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".ui.suggested.SuggestedUsersActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" /> <!-- ==============Activity============== -->
+        <activity
+            android:name=".ui.chat.DisplayActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.venuedetail.VenueDetailActivity"
+            android:screenOrientation="nosensor" /> <!-- <activity -->
+        <!-- android:name=".ui.like.LikesActivity" -->
+        <!-- android:screenOrientation="nosensor" /> -->
+        <activity
+            android:name=".ui.othernearvenue.OtherNearVenueActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".ui.home.HomeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="nosensor"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".ui.post.AddNewPostActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".ui.post.AddNewPostInfoActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".ui.tag.AddTagToPostActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="nosensor"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".ui.editprofile.EditProfileActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="nosensor"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".ui.activateaccount.ActivateAccountActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="nosensor"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".mediapicker.activities.VideoListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".ui.postlocation.AddPostLocationActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".ui.post.PostCameraActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".ui.postdetail.PostDetailActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".ui.reelsdetail.ReelsDetailActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".ui.latestevents.LatestEventsActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".ui.home.home.ReelsActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".base.view.cropper.CropImageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".ui.imagecrop.ImageCropActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".ui.croppostimages.CropPostImagesActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".ui.videorooms.VideoRoomsActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".ui.livestreamuser.LiveStreamUserActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".ui.watchliveevent.WatchLiveEventActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".ui.livestreamvenue.LiveStreamVenueActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".ui.addvenuemedia.AddVenueMediaActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".ui.venuegallerypreview.VenueGalleryPreviewActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".ui.fullscreenimage.FullScreenImageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="nosensor" /> <!-- ==============Storage============== -->
+        <meta-data
+            android:name="ScopedStorage"
+            android:value="true" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.file_provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider> <!-- ==============Firebase============== -->
+        <!-- <meta-data -->
+        <!-- android:name="firebase_crashlytics_collection_enabled" -->
+        <!-- android:value="${crashlyticsCollectionEnabled}" /> -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notification_icon" />
+
+        <service
+            android:name=".service.NotificationService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- ==============Facebook============== -->
+        <service
+            android:name=".service.UploadingPostReelsService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".service.StoryUploadingService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="@string/facebook_client_token" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity> <!-- ==============GoogleMaps============== -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_map_api_key" />
+    </application>
+
+</manifest>

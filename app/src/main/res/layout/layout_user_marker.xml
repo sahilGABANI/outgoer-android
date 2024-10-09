@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/myLocation"
+        android:layout_width="@dimen/_64sdp"
+        android:layout_height="@dimen/_64sdp"
+        android:visibility="gone"
+        android:layout_below="@+id/castingMessageFrameLayout"
+        android:src="@drawable/user_location" />
+
+    <FrameLayout
+        android:id="@+id/venueUserInfoFrameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/castingMessageFrameLayout">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_53sdp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_ic_image" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivUserProfile"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_place_holder_user_map"
+            app:riv_border_color="@color/white"
+            app:riv_border_width="@dimen/one_half_dp"
+            app:riv_oval="true" />
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/userNameAppCompatTextView"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_sans_semi_bold"
+        android:layout_below="@+id/venueUserInfoFrameLayout"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textColor="@color/md_white"
+        android:textSize="@dimen/_9sdp"
+        tools:text="21.2 mile" />
+
+    <FrameLayout
+        android:id="@+id/castingMessageFrameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-14dp">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/markerEdgeAppCompatImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:src="@drawable/half_circle"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/castMessageAppCompatTextView"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_sans_semi_bold"
+            android:gravity="center"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/md_white"
+            android:textSize="@dimen/_8ssp"
+            android:background="@drawable/purple_gradient_color"
+            android:paddingVertical="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:paddingHorizontal="@dimen/_6sdp"
+            tools:text="Lorem Ipsum is simply dum..." />
+
+    </FrameLayout>
+</RelativeLayout>

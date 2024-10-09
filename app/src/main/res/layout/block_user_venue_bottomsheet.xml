@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bottom_sheet_background"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="@dimen/zero_dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <View
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_2sdp"
+        android:layout_gravity="center"
+        android:layout_marginVertical="@dimen/_16sdp"
+        android:background="@color/grey_light" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_8sdp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/venueProfileRoundedImageView"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            app:riv_corner_radius="@dimen/_25sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="@dimen/_8sdp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvVenueName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/venueProfileRoundedImageView"
+            android:ellipsize="end"
+            android:fontFamily="@font/nunito_sans_semi_bold"
+            android:maxLines="2"
+            android:textColor="@color/md_white"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            tools:text="The Love Shack"
+            android:gravity="center"
+            android:layout_marginVertical="@dimen/_8sdp"
+            android:layout_centerHorizontal="true"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/noMessageAppCompatTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_12sdp"
+            android:layout_below="@+id/tvVenueName"
+            android:ellipsize="end"
+            android:fontFamily="@font/nunito_sans_semi_bold"
+            android:maxLines="2"
+            android:textColor="@color/md_white"
+            android:textSize="@dimen/_11ssp"
+            android:text="@string/block_message"
+            android:drawableStart="@drawable/no_notification"
+            android:drawablePadding="@dimen/_8sdp"
+            android:layout_marginHorizontal="@dimen/_24sdp"
+            android:layout_centerHorizontal="true"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/noNotificationAppCompatTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:layout_below="@+id/noMessageAppCompatTextView"
+            android:ellipsize="end"
+            android:fontFamily="@font/nunito_sans_semi_bold"
+            android:maxLines="2"
+            android:textColor="@color/md_white"
+            android:textSize="@dimen/_11ssp"
+            android:text="@string/block_notification"
+            android:drawableStart="@drawable/no_message"
+            android:drawablePadding="@dimen/_8sdp"
+            android:layout_marginHorizontal="@dimen/_24sdp"
+            android:layout_centerHorizontal="true"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/noSettingsAppCompatTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:layout_below="@+id/noNotificationAppCompatTextView"
+            android:ellipsize="end"
+            android:fontFamily="@font/nunito_sans_semi_bold"
+            android:maxLines="2"
+            android:textColor="@color/md_white"
+            android:textSize="@dimen/_11ssp"
+            android:text="@string/block_settings"
+            android:drawableStart="@drawable/ic_new_profile_setting_icon"
+            android:drawablePadding="@dimen/_8sdp"
+            android:layout_marginHorizontal="@dimen/_24sdp"
+            android:layout_centerHorizontal="true"/>
+
+        <View
+            android:id="@+id/blockView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/grey"
+            android:layout_marginVertical="@dimen/_8sdp"
+            android:layout_below="@+id/noSettingsAppCompatTextView"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/blockMaterialButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_below="@+id/blockView"
+            android:backgroundTint="@color/purple"
+            android:fontFamily="@font/inter_semi_bold"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/block"
+            android:textAllCaps="false"
+            android:textColor="@color/md_white"
+            android:textSize="@dimen/_12ssp"
+            app:cornerRadius="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_2sdp"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/_20sdp"
+    android:background="@color/colorFullTransparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/black_bottom_sheet_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_sans_bold"
+            android:text="@string/label_request_join"
+            android:textColor="@color/md_white"
+            android:textSize="@dimen/_16ssp" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            app:riv_oval="true"
+            android:id="@+id/ivUserProfile"
+            android:layout_width="@dimen/_64sdp"
+            android:layout_height="@dimen/_56sdp"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_chat_user_placeholder"
+            app:riv_corner_radius="@dimen/_6sdp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:fontFamily="@font/nunito_sans_semi_bold"
+            android:textColor="@color/md_white"
+            android:textSize="@dimen/_14ssp"
+            tools:text="Darell Steve" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/nunito_sans_regular"
+            android:text="@string/label_request_to_join_your_live"
+            android:textColor="@color/md_white"
+            android:textSize="@dimen/_12ssp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp">
+
+            <LinearLayout
+                android:id="@+id/llAcceptRejectButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:orientation="vertical">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAccept"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/purple"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/label_accept"
+                    android:textColor="@color/md_white"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    app:cornerRadius="@dimen/_6sdp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnReject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:backgroundTint="@color/grey_action"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/label_reject"
+                    android:textColor="@color/white_30_opacity"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    app:cornerRadius="@dimen/_6sdp"
+                    app:strokeColor="@color/white_30_opacity"
+                    app:strokeWidth="@dimen/_2sdp" />
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:layout_centerHorizontal="true"
+                android:clickable="false"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

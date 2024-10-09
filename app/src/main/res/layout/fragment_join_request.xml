@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/filtersLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="@dimen/_16sdp">
+
+        <FrameLayout
+            android:id="@+id/newFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/newAppCompatTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:background="@drawable/new_map_category_selected_background"
+                android:fontFamily="@font/inter_medium"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_4sdp"
+                android:text="@string/label_new"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/approveFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/approveAppCompatTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:background="@drawable/new_map_category_unselected_background"
+                android:fontFamily="@font/inter_medium"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_4sdp"
+                android:text="@string/label_approve"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/rejectFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/rejectAppCompatTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:background="@drawable/new_map_category_unselected_background"
+                android:fontFamily="@font/inter_medium"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_4sdp"
+                android:text="@string/label_rejected"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/itemRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+</LinearLayout>

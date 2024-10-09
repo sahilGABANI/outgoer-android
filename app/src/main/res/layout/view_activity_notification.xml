@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black">
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_15sdp"
+        android:paddingHorizontal="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/rlMessageContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivUserProfile"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="start|center_vertical"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_chat_user_placeholder"
+                app:riv_oval="true" />
+
+            <LinearLayout
+                android:id="@+id/llMessageData"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvNotificationMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/grey_light"
+                    android:textSize="@dimen/_11ssp"
+                    tools:text="Michel scott started following you" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvNotificationDateTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_light"
+                    android:textColor="@color/grey_light"
+                    android:textSize="@dimen/_10ssp"
+                    tools:text="@string/_5_min_ago" />
+            </LinearLayout>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivOtherMedia"
+                android:layout_width="@dimen/_36sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_gravity="center_vertical|end"
+                android:src="@drawable/notification_post_placeholder"
+                android:visibility="visible"
+                app:riv_border_color="@color/grey_light"
+                app:riv_border_width="@dimen/_1sdp"
+                app:riv_corner_radius="@dimen/_5sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlMessageContainer"
+            android:layout_marginStart="@dimen/_44sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFollow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/purple"
+                android:fontFamily="@font/inter_medium"
+                android:minWidth="@dimen/_90sdp"
+                android:minHeight="@dimen/_35sdp"
+                android:padding="@dimen/_4sdp"
+                android:text="@string/label_follow"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_12ssp"
+                app:cornerRadius="@dimen/_6sdp" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:backgroundTint="@color/grey_action"
+                android:fontFamily="@font/inter_medium"
+                android:minWidth="@dimen/_90sdp"
+                android:minHeight="@dimen/_35sdp"
+                android:padding="@dimen/_4sdp"
+                android:text="@string/label_message"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_12ssp"
+                app:cornerRadius="@dimen/_6sdp" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFollowing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlMessageContainer"
+            android:layout_marginStart="@dimen/_44sdp"
+            android:backgroundTint="@color/grey_action"
+            android:fontFamily="@font/inter_medium"
+            android:minWidth="@dimen/_90sdp"
+            android:minHeight="@dimen/_35sdp"
+            android:padding="@dimen/_4sdp"
+            android:text="@string/label_following"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_12ssp"
+            android:visibility="gone"
+            app:cornerRadius="@dimen/_6sdp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/grey_dark"
+        app:layout_constraintTop_toBottomOf="@id/rlMain" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorFullTransparent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/tabBarTopGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/half_dp" />
+
+    <LinearLayout
+        android:id="@+id/llFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/_4sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tabBarTopGuideLine">
+
+        <LinearLayout
+            android:id="@+id/llHome"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_2sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivHome"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:padding="@dimen/_1sdp"
+                android:src="@drawable/new_footer_home" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivHomeNavigation"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:paddingStart="@dimen/_1sdp"
+                android:paddingEnd="@dimen/zero_dp"
+                android:src="@drawable/ic_footer_activated"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:text="@string/label_home"
+                android:textColor="@color/md_white"
+                android:textSize="@dimen/_9ssp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSearch"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_2sdp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivSearch"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:padding="@dimen/_1sdp"
+                android:src="@drawable/home_search" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:text="@string/search"
+                android:textColor="@color/md_white"
+                android:textSize="@dimen/_9ssp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMap"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_2sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMap"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:padding="@dimen/_1sdp"
+                android:src="@drawable/new_home_footer_map" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMapNavigation"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:paddingStart="@dimen/_1sdp"
+                android:paddingEnd="@dimen/zero_dp"
+                android:src="@drawable/ic_footer_activated"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:text="@string/label_map"
+                android:textColor="@color/md_white"
+                android:textSize="@dimen/_9ssp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llCreate"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_2sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_34sdp"
+                android:layout_height="@dimen/_34sdp"
+                android:src="@drawable/ic_new_home_create"
+                android:padding="@dimen/_1sdp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMessage"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_2sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMessage"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:padding="@dimen/_1sdp"
+                android:src="@drawable/new_home_footer_reels" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivChatNavigation"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:paddingStart="@dimen/_1sdp"
+                android:paddingEnd="@dimen/zero_dp"
+                android:src="@drawable/ic_footer_activated"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:text="@string/label_message"
+                android:textColor="@color/md_white"
+                android:textSize="@dimen/_9ssp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMyProfile"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_2sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMyProfile"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/new_home_footer_profile" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivProfileNavigation"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:paddingStart="@dimen/_1sdp"
+                android:paddingEnd="@dimen/zero_dp"
+                android:src="@drawable/ic_footer_activated"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMyProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:text="@string/label_my_profile"
+                android:textColor="@color/md_white"
+                android:textSize="@dimen/_9ssp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--<LinearLayout
+        android:id="@+id/llDashboard"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="@dimen/zero_dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/llServices"
+        app:layout_constraintTop_toTopOf="@+id/tabBarTopGuideLine">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivDashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_home_footer_home" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:text="@string/label_home"
+            android:textColor="@color/md_white"
+            android:textSize="@dimen/_9ssp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llServices"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="@dimen/zero_dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/llDashboard"
+        app:layout_constraintRight_toLeftOf="@+id/llCreateNew"
+        app:layout_constraintTop_toTopOf="@+id/tabBarTopGuideLine">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivServices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_home_footer_reels" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvServices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:text="@string/label_reels"
+            android:textColor="@color/md_white"
+            android:textSize="@dimen/_9ssp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llCreateNew"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="@dimen/zero_dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/llServices"
+        app:layout_constraintRight_toLeftOf="@+id/llSettings"
+        app:layout_constraintTop_toTopOf="@+id/tabBarTopGuideLine">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCreateNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_home_footer_map" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCreateNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:text="@string/label_map"
+            android:textColor="@color/md_white"
+            android:textSize="@dimen/_9ssp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSettings"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="@dimen/zero_dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/llCreateNew"
+        app:layout_constraintRight_toLeftOf="@+id/llMore"
+        app:layout_constraintTop_toTopOf="@+id/tabBarTopGuideLine">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_home_footer_message" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:text="@string/label_message"
+            android:textColor="@color/md_white"
+            android:textSize="@dimen/_9ssp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llMore"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="@dimen/zero_dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/llSettings"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tabBarTopGuideLine">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_home_footer_profile" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:text="@string/label_my_profile"
+            android:textColor="@color/md_white"
+            android:textSize="@dimen/_9ssp" />
+
+    </LinearLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

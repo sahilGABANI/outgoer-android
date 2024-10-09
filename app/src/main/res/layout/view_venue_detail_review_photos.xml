@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="@dimen/_80sdp"
+        tools:src="@drawable/venue_placeholder"
+        android:scaleType="centerCrop"
+        android:layout_margin="@dimen/_2sdp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

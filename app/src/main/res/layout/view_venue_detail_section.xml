@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/_14sdp"
+        android:paddingTop="@dimen/_18sdp"
+        android:paddingEnd="@dimen/_14sdp"
+        android:paddingBottom="@dimen/_4sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSectionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/tvSeeAll"
+            android:fontFamily="@font/nunito_sans_extra_bold"
+            android:textColor="@color/md_white"
+            android:textSize="@dimen/_14ssp"
+            tools:text="Latest Events" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSeeAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical|end"
+            android:minEms="5"
+            android:padding="@dimen/_2sdp"
+            android:text="@string/see_all"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/_12ssp" />
+
+    </RelativeLayout>
+
+</merge>

@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorFullTransparent"
+    android:orientation="horizontal">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4sdp"
+        android:background="@drawable/new_login_edittext_background"
+        app:cardBackgroundColor="@color/grey_action"
+        app:cardCornerRadius="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/rlMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <FrameLayout
+                android:id="@+id/profileFrameLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_2sdp"
+                android:layout_marginVertical="@dimen/_2sdp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:background="@drawable/ring_gredient_color"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_place_holder_post"
+                    app:riv_border_width="@dimen/zero_dp"
+                    app:riv_corner_radius="@dimen/_26sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/liveProfileAppCompatTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:background="@drawable/ring_gredient_color"
+                    android:fontFamily="@font/inter_semi_bold"
+                    android:paddingHorizontal="@dimen/_4sdp"
+                    android:paddingVertical="@dimen/_2sdp"
+                    android:text="@string/live"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8ssp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:layout_toEndOf="@+id/profileFrameLayout"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/mainSpontyInfoRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true">
+
+                    <FrameLayout
+                        android:id="@+id/moreInfoFrameLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cvDelete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:background="@drawable/new_login_edittext_background"
+                            app:cardBackgroundColor="@color/grey_action"
+                            app:cardCornerRadius="@dimen/_5sdp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_26sdp"
+                                android:layout_height="@dimen/_26sdp"
+                                android:layout_alignParentEnd="true"
+                                android:background="#484848"
+                                android:padding="@dimen/_6sdp"
+                                android:src="@drawable/ic_delete_sponty" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/moreMaterialCardView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:visibility="visible"
+                            app:cardBackgroundColor="@color/grey_action_transparent_60"
+                            app:cardCornerRadius="@dimen/_5sdp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_26sdp"
+                                android:layout_height="@dimen/_26sdp"
+                                android:layout_alignParentEnd="true"
+                                android:padding="@dimen/_6sdp"
+                                android:rotation="90"
+                                android:src="@drawable/ic_reel_more" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llUserInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@id/moreInfoFrameLayout"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/usernameAppCompatTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/inter_bold"
+                            android:maxLines="1"
+                            android:textColor="@color/md_white"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold"
+                            tools:text="Usernamedsadsadsadsadsadsadsadsadsa" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivVerified"
+                            android:layout_width="@dimen/_10sdp"
+                            android:layout_height="@dimen/_10sdp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/half_dp"
+                            android:src="@drawable/ic_user_verificatied_badge"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:src="@drawable/ic_post_dot" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/timeAppCompatTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_toStartOf="@+id/llCommentAndLike"
+                            android:fontFamily="@font/inter_light"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:paddingBottom="@dimen/_2sdp"
+                            android:textColor="@color/md_white"
+                            android:textSize="@dimen/_9ssp"
+                            tools:text="Friday 10:30 PM" />
+
+                    </LinearLayout>
+
+                    <com.outgoer.base.view.socialview.widget.SocialTextView
+                        android:id="@+id/aboutAppCompatTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/llUserInfo"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_toStartOf="@id/joinFrameLayout"
+                        android:fontFamily="@font/inter_semi_bold"
+                        android:paddingEnd="@dimen/_3sdp"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/md_white"
+                        android:textSize="@dimen/_9ssp"
+                        app:hashtagColor="@color/color_blue"
+                        app:mentionColor="@color/purple"
+                        app:socialFlags="mention|hashtag"
+                        tools:text="arh ri hs shto sthsts sit oishtsih sith soith shtsht hsts ihtsoiht oisht h;" />
+
+                    <FrameLayout
+                        android:id="@+id/joinFrameLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/moreInfoFrameLayout"
+                        android:layout_alignParentEnd="true"
+                        android:visibility="gone">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/joinMaterialButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:backgroundTint="@color/purple"
+                            android:fontFamily="@font/inter_regular"
+                            android:gravity="center"
+                            android:padding="@dimen/_4sdp"
+                            android:text="@string/label_join"
+                            android:textAllCaps="false"
+                            android:textColor="@color/md_white"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                            app:cornerRadius="@dimen/_6sdp"
+                            tools:visibility="visible" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/unjoinMaterialButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:backgroundTint="@color/grey_medium"
+                            android:fontFamily="@font/inter_regular"
+                            android:gravity="center"
+                            android:padding="@dimen/_4sdp"
+                            android:text="@string/label_unjoin"
+                            android:textAllCaps="false"
+                            android:textColor="@color/md_white"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                            app:cornerRadius="@dimen/_6sdp" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llCommentAndLike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/joinFrameLayout"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/commentLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:layout_marginEnd="@dimen/_6sdp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivComment"
+                                android:layout_width="@dimen/_18sdp"
+                                android:layout_height="@dimen/_18sdp"
+                                android:padding="@dimen/_3sdp"
+                                android:src="@drawable/ic_comment" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvCommentCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/inter_regular"
+                                android:paddingStart="@dimen/_1sdp"
+                                android:text="@string/_0"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10sdp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/likeLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginEnd="@dimen/_6sdp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/likeAppCompatImageView"
+                                android:layout_width="@dimen/_19sdp"
+                                android:layout_height="@dimen/_19sdp"
+                                android:layout_gravity="center_vertical"
+                                android:padding="@dimen/_3sdp"
+                                android:src="@drawable/ic_post_like" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvLikeCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/inter_regular"
+                                android:paddingStart="@dimen/_1sdp"
+                                android:text="@string/_0"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10sdp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlSpontyDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/aboutAppCompatTextView"
+                        android:layout_toStartOf="@+id/joinFrameLayout"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/dateTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:drawableStart="@drawable/ic_clock"
+                            android:drawablePadding="@dimen/_4sdp"
+                            android:fontFamily="@font/inter_light"
+                            android:paddingBottom="@dimen/_2sdp"
+                            android:textColor="@color/md_white"
+                            android:textSize="@dimen/_9ssp"
+                            tools:text="Friday 10:30 PM - 03:30 AM " />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/locationAppCompatTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/dateTime"
+                            android:layout_marginVertical="@dimen/_2sdp"
+                            android:drawableStart="@drawable/ic_post_location"
+                            android:drawablePadding="@dimen/_4sdp"
+                            android:drawableTint="@color/white"
+                            android:fontFamily="@font/inter_regular"
+                            android:paddingEnd="@dimen/_8sdp"
+                            android:paddingBottom="@dimen/_2sdp"
+                            android:textColor="@color/md_white"
+                            android:textSize="@dimen/_9ssp"
+                            tools:text="Noble Park, Victoria" />
+
+                        <LinearLayout
+                            android:id="@+id/cvVenueTaggedContainer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/locationAppCompatTextView"
+                            android:layout_alignParentStart="true"
+                            android:layout_gravity="center_vertical|start"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:id="@+id/placeVenueFrameLayout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="@dimen/_2sdp"
+                                android:layout_marginEnd="@dimen/_5sdp">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/light_grey_rounded_background"
+                                    android:orientation="horizontal"
+                                    android:paddingHorizontal="@dimen/_4sdp"
+                                    android:paddingVertical="@dimen/_2sdp">
+
+                                    <FrameLayout
+                                        android:id="@+id/profileVenueFrameLayout"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginHorizontal="@dimen/_2sdp"
+                                        android:layout_marginVertical="@dimen/_2sdp">
+
+                                        <com.makeramen.roundedimageview.RoundedImageView
+                                            android:id="@+id/profileVenueAppCompatImageView"
+                                            android:layout_width="@dimen/_20sdp"
+                                            android:layout_height="@dimen/_20sdp"
+                                            android:layout_marginBottom="@dimen/_2sdp"
+                                            android:background="@drawable/ring_gredient_color"
+                                            android:padding="@dimen/_1sdp"
+                                            android:scaleType="centerCrop"
+                                            android:src="@drawable/ic_place_holder_post"
+                                            app:riv_border_width="@dimen/zero_dp"
+                                            app:riv_corner_radius="@dimen/_26sdp" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/liveAppCompatTextView"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal|bottom"
+                                            android:background="@drawable/ring_gredient_color"
+                                            android:fontFamily="@font/inter_semi_bold"
+                                            android:paddingHorizontal="@dimen/_2sdp"
+                                            android:paddingVertical="@dimen/_1sdp"
+                                            android:text="@string/live"
+                                            android:textAllCaps="true"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_6ssp"
+                                            android:textStyle="bold"
+                                            android:visibility="gone" />
+                                    </FrameLayout>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/venueTaggedAppCompatTextView"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginStart="@dimen/_2sdp"
+                                        android:layout_marginEnd="@dimen/_3sdp"
+                                        android:layout_toEndOf="@+id/profileVenueFrameLayout"
+                                        android:fontFamily="@font/inter_regular"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_10ssp"
+                                        tools:text="# hashtag" />
+
+                                </RelativeLayout>
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mainSpontyInfoRelativeLayout">
+
+                    <HorizontalScrollView
+                        android:id="@+id/llSpontyImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:orientation="horizontal"
+                            android:paddingVertical="@dimen/_4sdp">
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:id="@+id/spontyFirstImage"
+                                android:layout_width="@dimen/_56sdp"
+                                android:layout_height="@dimen/_56sdp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/venue_placeholder"
+                                app:riv_corner_radius="@dimen/_6sdp" />
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:id="@+id/spontySecondImage"
+                                android:layout_width="@dimen/_56sdp"
+                                android:layout_height="@dimen/_56sdp"
+                                android:layout_marginStart="@dimen/_2sdp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/venue_placeholder"
+                                app:riv_corner_radius="@dimen/_6sdp" />
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:id="@+id/spontyThirdImage"
+                                android:layout_width="@dimen/_56sdp"
+                                android:layout_height="@dimen/_56sdp"
+                                android:layout_marginStart="@dimen/_2sdp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/venue_placeholder"
+                                app:riv_corner_radius="@dimen/_6sdp" />
+
+                            <FrameLayout
+                                android:id="@+id/videoFrameLayout"
+                                android:layout_width="@dimen/_56sdp"
+                                android:layout_height="@dimen/_56sdp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/_2sdp">
+
+                                <com.makeramen.roundedimageview.RoundedImageView
+                                    android:id="@+id/spontyFirstVideo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/venue_placeholder"
+                                    app:riv_corner_radius="@dimen/_6sdp" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:scaleType="center"
+                                    android:src="@drawable/ic_video_play" />
+
+                            </FrameLayout>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <LinearLayout
+                        android:id="@+id/checkJoinMaterialButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/llSpontyImage"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_4sdp"
+                            android:rotation="135"
+                            android:src="@drawable/copy_link" />
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/firstRoundedImageView"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@drawable/grey_semi_transparent"
+                            android:src="@drawable/ic_add"
+                            app:riv_corner_radius="@dimen/_16sdp" />
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/secondRoundedImageView"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="-20dp"
+                            android:background="@drawable/grey_semi_transparent"
+                            android:src="@drawable/ic_add"
+                            app:riv_corner_radius="@dimen/_16sdp" />
+
+                        <FrameLayout
+                            android:id="@+id/moreFrameLayout"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="-20dp">
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:id="@+id/thirdRoundedImageView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/grey_semi_transparent"
+                                android:src="@drawable/ic_add"
+                                app:riv_corner_radius="@dimen/_16sdp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/maxRoundedImageView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/grey_semi_transparent"
+                                android:fontFamily="@font/inter_regular"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:textColor="@color/md_white"
+                                android:textSize="@dimen/_10sdp" />
+
+                        </FrameLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

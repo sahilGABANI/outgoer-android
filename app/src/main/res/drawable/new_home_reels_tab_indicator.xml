@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="rectangle">
+            <stroke android:width="@dimen/_8sdp" android:color="@android:color/transparent" />
+            <solid android:color="@color/grey_light_tab_indicator"/>
+            <corners android:radius="@dimen/_50sdp"/>
+        </shape>
+    </item>
+
+</selector>

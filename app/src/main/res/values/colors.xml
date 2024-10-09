@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#263254</color>
+    <color name="colorPrimaryDark">#08163c</color>
+    <color name="colorAccent">#4ac7f1</color>
+
+    <color name="newColorPrimary">#3A3A3D</color>
+    <color name="newColorPrimaryDark">#242426</color>
+    <color name="newColorAccent">#BF5AF2</color>
+
+    <color name="colorFullTransparent">#00000000</color>
+    <color name="colorHalfTransparent">#80000000</color>
+
+    <color name="colorTransparentStart">#85000000</color>
+    <color name="colorTransparentCenter">#65000000</color>
+    <color name="colorTransparentEnd">#45000000</color>
+
+    <color name="colorWindowBackground">#60000000</color>
+
+    <color name="color08163C">#08163C</color>
+    <color name="color4AC7F1">#4AC7F1</color>
+    <color name="colorE2E2E2">#E2E2E2</color>
+
+    <color name="color08163CB5">#B508163C</color>
+    <color name="color08163C00">#0008163C</color>
+
+    <color name="color99000000">#99000000</color>
+    <color name="color1B284B">#1B284B</color>
+
+    <color name="md_grey200">#eeeeee</color>
+    <color name="md_grey600">#757575</color>
+    <color name="md_grey700">#616161</color>
+    <color name="md_grey900">#212121</color>
+
+    <color name="md_white">#ffffff</color>
+    <color name="color_blue">#4f93f7</color>
+
+    <color name="colorDotsDisabled">#4DFFFFFF</color>
+    <color name="colorRegisterField">#353E5E</color>
+    <color name="colorHomeSuggestion">#1b284b</color>
+    <color name="colorMapHeader">#40000000</color>
+
+    <color name="notification_unread_color">#EF1D2E</color>
+    <color name="white_60_opacity">#CCFFFFFF</color>
+    <color name="white_50_opacity">#80FFFFFF</color>
+    <color name="white_40_opacity">#66FFFFFF</color>
+    <color name="white_25_opacity">#40FFFFFF</color>
+    <color name="white_30_opacity">#4DFFFFFF</color>
+    <color name="white_12_opacity">#1FFFFFFF</color>
+    <color name="white_10_opacity">#1AFFFFFF</color>
+    <color name="white_08_opacity">#14FFFFFF</color>
+
+    <color name="popup_create_view">#3B3B3D</color>
+
+    <!--Audio Trimmer-->
+
+    <color name="color263254">#263254</color>
+    <color name="color5708163C">#5708163C</color>
+
+    <!-- Video editor colors (it may be your brand colors to customize editor for app style consistency) -->
+
+    <!--New UI-->
+    <color name="purple">#BF5AF2</color>
+    <color name="purple_B420FF">#B420FF</color>
+    <color name="indigo">#6457CE</color>
+    <color name="blue">#0A84FF</color>
+    <color name="grey_light">#AEAEB2</color>
+    <color name="grey_dark">#242426</color>
+    <color name="grey">#2E2E2E</color>
+    <color name="grey_action">#3A3A3D</color>
+    <color name="grey_action_transparent_80">#CC3A3A3D</color>
+    <color name="grey_light_tab_indicator">#B2AEAEB2</color>
+    <color name="black_transparent_84">#B2000000</color>
+    <color name="black_create_poll_background">#B2000000</color>
+    <color name="grey_medium">#6F6F6F</color>
+    <color name="grey_dark_transparent_80">#CC242426</color>
+    <color name="black_transparent_74">#BD000000</color>
+    <color name="grey_action_transparent_60">#B77A7A7A</color>
+    <color name="card_shop_discount_bg">#D9D9D9</color>
+    <color name="color_e84d4d">#e84d4d</color>
+    <color name="color_5a5a5a">#5A5A5A</color>
+    <color name="color_B421FF">#CA67FD</color>
+    <color name="color_FF2121">#FF2121</color>
+    <color name="color_03CA16">#03CA16</color>
+    <color name="color_363638">#7D7D81</color>
+    <color name="color_76c1ed">#76c1ed</color>
+    <color name="color_4152c1">#4152c1</color>
+    <color name="color_2948FF">#2948FF</color>
+    <color name="color_396AFC">#396AFC</color>
+    <color name="color_FD8AFF">#FD8AFF</color>
+
+    <color name="color_3158fd">#3158fd</color>
+    <color name="color_2b4bfe">#2b4bfe</color>
+    <color name="color_2f56fc">#2f56fc</color>
+
+    <color name="clouded_vision">#D1D1D1</color>
+    <color name="color_777777">#777777</color>
+    <color name="matt_black">#151515</color>
+    <color name="color_video_transparent">#88000000</color>
+    <color name="color_re_transparent">#74000000</color>
+    <color name="color_A7A7A7">#A7A7A7</color>
+    <color name="color_808080">#808080</color>
+    <color name="color_434343">#434343</color>
+
+    <color name="color_FF9500">#FF9500</color>
+    <color name="color_FF9500_transparent_15">#26FF9500</color>
+
+    <color name="color_34C759">#34C759</color>
+    <color name="color_34C759_transparent_15">#2634C759</color>
+
+
+    <color name="progress_max_active">#BF5AF2</color>
+    <color name="progress_secondary">#C4C4C4</color>
+    <color name="progress_primary">#BF5AF2</color>
+    <color name="color_3a3a3c">#3a3a3c</color>
+
+    <color name="white">#F4F4F4</color>
+    <color name="black">#000000</color>
+    <color name="blue_color_picker">#3899F5</color>
+    <color name="green_color_picker">#51C23D</color>
+    <color name="yellow_color_picker">#F9C741</color>
+    <color name="orange_color_picker">#F58405</color>
+    <color name="pink_color_picker">#F33351</color>
+    <color name="strawbary_color_picker">#E30169</color>
+    <color name="purple_color_picker">#B108C0</color>
+    <color name="red_color_picker">#F30106</color>
+    <color name="light_pink_color_picker">#F67F8D</color>
+    <color name="pich_color_picker">#FBD0D1</color>
+    <color name="light_yellow_color_picker">#FBD9AD</color>
+    <color name="light_yellow_1_color_picker">#F9BF75</color>
+    <color name="occur_color_picker">#DC8A32</color>
+    <color name="light_brown_picker">#A3612F</color>
+    <color name="brown_picker">#482222</color>
+    <color name="dark_green_picker">#134A26</color>
+    <color name="grey_1_picker">#C5E17A</color>
+    <color name="grey_2_picker">#363636</color>
+    <color name="grey_3_picker">#555555</color>
+    <color name="grey_4_picker">#737373</color>
+    <color name="grey_5_picker">#999999</color>
+    <color name="grey_6_picker">#B2B2B2</color>
+    <color name="grey_7_picker">#C7C7C7</color>
+    <color name="grey_8_picker">#DBDBDB</color>
+    <color name="grey_91_picker">#FBFBFB</color>
+
+    <color name="color_303030">#303030</color>
+    <color name="color_80383838">#3F51B5</color>
+    <color name="color_E6E6E6">#E6E6E6</color>
+    <color name="color_FF979797">#FF979797</color>
+    <color name="color_FF111111">#111111</color>
+    <color name="color_FFA5A5A5">#FFA5A5A5</color>
+    <color name="color_FF656468">#FF656468</color>
+
+</resources>

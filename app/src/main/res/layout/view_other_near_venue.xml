@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorFullTransparent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/llVenueInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/other_near_venue_rounded_corner_background"
+            android:orientation="horizontal"
+            android:padding="@dimen/_8sdp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_65sdp"
+                app:cardBackgroundColor="@color/colorFullTransparent"
+                app:cardCornerRadius="@dimen/_8sdp"
+                app:cardElevation="@dimen/zero_dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivVenueImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:foreground="@drawable/venue_image_overlay"
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/venue_placeholder" />
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/ivFavourite"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvVenueName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/nunito_sans_bold"
+                            android:maxLines="1"
+                            android:textColor="@color/md_white"
+                            android:textSize="@dimen/_12ssp"
+                            android:textStyle="bold"
+                            tools:text="The Love Shack" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:textColor="@color/white_50_opacity"
+                            android:textSize="@dimen/_10ssp"
+                            tools:text="Lorem Ipsum idimply dummy text" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivFavourite"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_alignParentEnd="true"
+                        android:padding="@dimen/_4sdp"
+                        android:src="@drawable/ic_favourite_venue_inactive" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llMapIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDistance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:gravity="center_vertical|end"
+                        android:maxLines="1"
+                        android:textColor="@color/md_white"
+                        android:textSize="@dimen/_9ssp"
+                        tools:text="1 mile" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivDirection"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:src="@drawable/ic_map_direction" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivVenueCategoryImage"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_gravity="start"
+            app:riv_border_color="@color/color08163C"
+            app:riv_border_width="@dimen/_2sdp"
+            app:riv_oval="true"
+            tools:src="@drawable/venue_placeholder">
+
+        </com.makeramen.roundedimageview.RoundedImageView>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

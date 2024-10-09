@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="@dimen/_4sdp"
+        android:layout_margin="@dimen/_2sdp"
+        android:backgroundTint="@color/grey_dark_transparent_80">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_3sdp">
+
+            <TextView
+                android:id="@+id/tvLoaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Australia"
+                android:padding="@dimen/_4sdp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/inter_regular"
+                android:textSize="@dimen/_10ssp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

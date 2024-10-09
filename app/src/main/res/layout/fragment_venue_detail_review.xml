@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/inter_semi_bold"
+            android:text="@string/label_reviews"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addReviewMaterialButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:fontFamily="@font/inter_regular"
+            android:letterSpacing="0"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingHorizontal="@dimen/_14sdp"
+            android:paddingVertical="@dimen/_6sdp"
+            android:text="@string/label_add_review"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_11ssp"
+            app:cornerRadius="@dimen/_6sdp" />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/noReviewAppCompatTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/inter_medium"
+        android:text="@string/label_no_reviews"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ratingLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvVenueRatingCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/inter_medium"
+                android:text="0.00"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_22ssp" />
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/venueRatingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5ssp"
+                android:numStars="5"
+                android:theme="@style/RatingBar" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/totalAppCompatTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fontFamily="@font/inter_regular"
+                android:text="(0)"
+                android:textColor="@color/grey_light"
+                android:textSize="@dimen/_14ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/fiveLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/ratingAppCompatTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/_2sdp"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="5"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/new_ratingbar_filled"
+                        android:tint="@color/colorE2E2E2" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:id="@+id/fiveAppCompatSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_3sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="-8dp"
+                    android:layout_toEndOf="@+id/fiveLinearLayout"
+                    android:max="100"
+                    android:min="0"
+                    android:progressDrawable="@drawable/venue_detail_review_seekbar_track"
+                    android:thumb="@color/colorFullTransparent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/fourLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/_2sdp"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="4"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/new_ratingbar_filled"
+                        android:tint="@color/colorE2E2E2" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:id="@+id/fourAppCompatSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_3sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="-8dp"
+                    android:layout_toEndOf="@+id/fourLinearLayout"
+                    android:max="100"
+                    android:min="0"
+                    android:progressDrawable="@drawable/venue_detail_review_seekbar_track"
+                    android:thumb="@color/colorFullTransparent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/threeLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/_2sdp"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="3"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/new_ratingbar_filled"
+                        android:tint="@color/colorE2E2E2" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:id="@+id/threeAppCompatSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_3sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="-8dp"
+                    android:layout_toEndOf="@+id/threeLinearLayout"
+                    android:max="100"
+                    android:min="0"
+                    android:progressDrawable="@drawable/venue_detail_review_seekbar_track"
+                    android:thumb="@color/colorFullTransparent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/twoLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/_2sdp"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="2"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/new_ratingbar_filled"
+                        android:tint="@color/colorE2E2E2" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:id="@+id/twoAppCompatSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_3sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="-8dp"
+                    android:layout_toEndOf="@+id/twoLinearLayout"
+                    android:max="100"
+                    android:min="0"
+                    android:progressDrawable="@drawable/venue_detail_review_seekbar_track"
+                    android:thumb="@color/colorFullTransparent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/oneLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="1"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/new_ratingbar_filled"
+                        android:tint="@color/colorE2E2E2" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:id="@+id/oneAppCompatSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_3sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="-8dp"
+                    android:layout_toEndOf="@+id/oneLinearLayout"
+                    android:max="100"
+                    android:min="0"
+                    android:progressDrawable="@drawable/venue_detail_review_seekbar_track"
+                    android:thumb="@color/colorFullTransparent" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reviewsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/view_venue_detail_review" />
+</LinearLayout>

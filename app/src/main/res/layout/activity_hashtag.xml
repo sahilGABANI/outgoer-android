@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/headerRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="@dimen/_4sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:padding="@dimen/_6sdp"
+                android:text="@string/add_hashtag"
+                android:textColor="@color/md_white"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_10sdp"
+                android:tint="@color/white"
+                android:src="@drawable/ic_back_arrow" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/newHashtagLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/headerRelativeLayout"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etHashtag"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/new_edittext_background"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:hint="@string/label_enter_hashtag"
+                android:padding="@dimen/_8sdp"
+                android:textColorHint="@color/grey_light"
+                android:textColor="@color/white"
+                android:fontFamily="@font/inter_regular"
+                android:textSize="@dimen/_11ssp"
+                android:layout_gravity="center_vertical"
+                android:inputType="textCapSentences"
+                android:imeOptions="actionSend" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addMaterialButton"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/label_Add"
+                android:textAllCaps="false"
+                android:fontFamily="@font/inter_medium"
+                android:backgroundTint="@color/grey_dark"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/white"
+                app:cornerRadius="@dimen/_6sdp"
+                android:layout_gravity="center_vertical" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/addhashtagListAppCompatEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:background="@drawable/bg_purple_just_border"
+            android:gravity="top"
+            android:minHeight="@dimen/_80sdp"
+            android:orientation="vertical"
+            android:textColor="@color/white"
+            android:padding="@dimen/_4sdp"
+            android:textColorHint="@color/grey_light_tab_indicator"
+            app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/newHashtagLinearLayout"
+            tools:layout_editor_absoluteX="21dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/hashtagRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginVertical="@dimen/_6sdp"
+            android:background="@drawable/new_edittext_background"
+            android:padding="@dimen/_6sdp"
+            app:layout_constraintBottom_toTopOf="@+id/addHashtagMaterialButton"
+            app:layout_constraintTop_toBottomOf="@+id/addhashtagListAppCompatEditText"
+            android:layout_marginHorizontal="@dimen/_16sdp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addHashtagMaterialButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_add_hashtags"
+            android:textAllCaps="false"
+            android:layout_margin="@dimen/_14sdp"
+            android:fontFamily="@font/inter_medium"
+            android:backgroundTint="@color/grey_dark"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/_6sdp"
+            android:layout_gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
